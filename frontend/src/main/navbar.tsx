@@ -11,26 +11,68 @@ const Navbar: React.FC = () => {
 
         {/* Navigation links */}
         <ul className="flex space-x-10">
-          <li className="text-sm text-white hover:text-white hover:text-shadow-glow transition-all duration-300 transform hover:scale-112">
-            <a href="#">HOME</a>
+          <li className="text-sm text-white relative group">
+            <a
+              href="#"
+              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+            >
+              HOME
+              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
           </li>
-          <li className="text-sm text-white hover:text-white hover:text-shadow-glow transition-all duration-300 transform hover:scale-112">
-            <a href="#about-me">ABOUT ME</a>
+          <li className="text-sm text-white relative group">
+            <a
+              href="#about-me"
+              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+            >
+              ABOUT ME
+              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
           </li>
-          <li className="text-sm text-white hover:text-white hover:text-shadow-glow transition-all duration-300 transform hover:scale-112">
-            <a href="#professional">PROFESSIONAL</a>
+          <li className="text-sm text-white relative group">
+            <a
+              href="#professional"
+              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+            >
+              PROFESSIONAL
+              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
           </li>
-          <li className="text-sm text-white hover:text-white hover:text-shadow-glow transition-all duration-300 transform hover:scale-112">
-            <a href="#education">EDUCATION</a>
+          <li className="text-sm text-white relative group">
+            <a
+              href="#education"
+              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+            >
+              EDUCATION
+              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
           </li>
-          <li className="text-sm text-white hover:text-white hover:text-shadow-glow transition-all duration-300 transform hover:scale-112">
-            <a href="#projects">PROJECTS</a>
+          <li className="text-sm text-white relative group">
+            <a
+              href="#projects"
+              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+            >
+              PROJECTS
+              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
           </li>
-          <li className="text-sm text-white hover:text-white hover:text-shadow-glow transition-all duration-300 transform hover:scale-112">
-            <a href="#certificate">CERTIFICATE</a>
+          <li className="text-sm text-white relative group">
+            <a
+              href="#certificate"
+              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+            >
+              CERTIFICATE
+              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
           </li>
-          <li className="text-sm text-white hover:text-white hover:text-shadow-glow transition-all duration-300 transform hover:scale-112">
-            <a href="#contact">CONTACT</a>
+          <li className="text-sm text-white relative group">
+            <a
+              href="#contact"
+              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+            >
+              CONTACT
+              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
           </li>
         </ul>
       </div>
