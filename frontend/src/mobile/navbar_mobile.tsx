@@ -41,7 +41,7 @@ const NavbarMobile: React.FC = () => {
       >
         <div className="flex justify-between items-center">
           <div className="text-white text-lg font-semibold">
-            Al Fitra's Portfolio
+            Ramdhani's Portfolio
           </div>
           {/* Close button */}
           <button className="text-white" onClick={toggleMenu}>

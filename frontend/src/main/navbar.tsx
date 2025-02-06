@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Left-aligned text */}
         <div className="text-white text-xl font-semibold">
-          Al Fitra's Portfolio
+          Ramdhani's Portfolio
         </div>
 
         {/* Navigation links */}
