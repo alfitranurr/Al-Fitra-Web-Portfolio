@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             className="hover:text-[#E1306C] hover:scale-120 transition-all duration-300"
           >
-            <FaInstagram size={24} />
+            <FaInstagram size={22} />
           </a>
           <a
             href="https://wa.me/+6285158779239"
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             className="hover:text-[#25D366] hover:scale-120 transition-all duration-300"
           >
-            <FaWhatsapp size={24} />
+            <FaWhatsapp size={22} />
           </a>
           <a
             href="https://www.linkedin.com/in/al-fitra-nur-ramadhani/"
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             className="hover:text-[#0077B5] hover:scale-120 transition-all duration-300"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedin size={22} />
           </a>
           <a
             href="https://github.com/alfitranurr"
@@ -37,12 +37,12 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             className="hover:text-[#333] hover:scale-120 transition-all duration-300"
           >
-            <FaGithub size={24} />
+            <FaGithub size={22} />
           </a>
         </div>
 
         {/* Right section: Copyright text */}
-        <div className="text-white text-sm text-right">
+        <div className="text-white text-xs text-right">
           <p>&copy; 2025 Al Fitra Nur Ramadhani. All rights reserved.</p>
         </div>
       </div>

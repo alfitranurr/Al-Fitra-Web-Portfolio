@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
 
         {/* Navigation links */}
         <ul className="flex space-x-10">
-          <li className="text-sm text-white relative group">
+          <li className="text-xs text-white relative group">
             <a
               href="#"
               className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
               <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           </li>
-          <li className="text-sm text-white relative group">
+          <li className="text-xs text-white relative group">
             <a
               href="#about-me"
               className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
               <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           </li>
-          <li className="text-sm text-white relative group">
+          <li className="text-xs text-white relative group">
             <a
               href="#professional"
               className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
               <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           </li>
-          <li className="text-sm text-white relative group">
+          <li className="text-xs text-white relative group">
             <a
               href="#education"
               className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
               <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           </li>
-          <li className="text-sm text-white relative group">
+          <li className="text-xs text-white relative group">
             <a
               href="#projects"
               className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
               <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           </li>
-          <li className="text-sm text-white relative group">
+          <li className="text-xs text-white relative group">
             <a
               href="#certificate"
               className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
               <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           </li>
-          <li className="text-sm text-white relative group">
+          <li className="text-xs text-white relative group">
             <a
               href="#contact"
               className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
