@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const NavbarMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const [activePage, setActivePage] = useState<string>("");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location]);
 
   return (
     <nav className="bg-[#474E68] p-4 shadow-md">
@@ -65,67 +72,136 @@ const NavbarMobile: React.FC = () => {
 
         {/* Navigation links */}
         <ul className="space-y-4 text-left mt-8">
+          {/* HOME */}
           <li className="text-sm text-white relative group">
             <a
               href="#"
-              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+              className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
+                activePage === "/" ? "text-white" : ""
+              }`}
             >
               HOME
-              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 inline-block"></span>
+              <span
+                className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
+                  activePage === "/"
+                    ? "w-full left-1/2 -translate-x-1/2"
+                    : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                }`}
+              ></span>
             </a>
           </li>
+
+          {/* ABOUT ME */}
           <li className="text-sm text-white relative group">
             <a
               href="#about-me"
-              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+              className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
+                activePage === "/about-me" ? "text-white" : ""
+              }`}
             >
               ABOUT ME
-              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 inline-block"></span>
+              <span
+                className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
+                  activePage === "/about-me"
+                    ? "w-full left-1/2 -translate-x-1/2"
+                    : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                }`}
+              ></span>
             </a>
           </li>
+
+          {/* PROFESSIONAL */}
           <li className="text-sm text-white relative group">
             <a
               href="#professional"
-              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+              className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
+                activePage === "/professional" ? "text-white" : ""
+              }`}
             >
               PROFESSIONAL
-              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 inline-block"></span>
+              <span
+                className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
+                  activePage === "/professional"
+                    ? "w-full left-1/2 -translate-x-1/2"
+                    : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                }`}
+              ></span>
             </a>
           </li>
+
+          {/* EDUCATION */}
           <li className="text-sm text-white relative group">
             <a
               href="#education"
-              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+              className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
+                activePage === "/education" ? "text-white" : ""
+              }`}
             >
               EDUCATION
-              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 inline-block"></span>
+              <span
+                className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
+                  activePage === "/education"
+                    ? "w-full left-1/2 -translate-x-1/2"
+                    : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                }`}
+              ></span>
             </a>
           </li>
+
+          {/* PROJECTS */}
           <li className="text-sm text-white relative group">
             <a
               href="#projects"
-              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+              className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
+                activePage === "/projects" ? "text-white" : ""
+              }`}
             >
               PROJECTS
-              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 inline-block"></span>
+              <span
+                className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
+                  activePage === "/projects"
+                    ? "w-full left-1/2 -translate-x-1/2"
+                    : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                }`}
+              ></span>
             </a>
           </li>
+
+          {/* CERTIFICATE */}
           <li className="text-sm text-white relative group">
             <a
               href="#certificate"
-              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+              className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
+                activePage === "/certificate" ? "text-white" : ""
+              }`}
             >
               CERTIFICATE
-              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 inline-block"></span>
+              <span
+                className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
+                  activePage === "/certificate"
+                    ? "w-full left-1/2 -translate-x-1/2"
+                    : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                }`}
+              ></span>
             </a>
           </li>
+
+          {/* CONTACT */}
           <li className="text-sm text-white relative group">
             <a
               href="#contact"
-              className="hover:text-white transition-all duration-300 transform group-hover:scale-110"
+              className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
+                activePage === "/contact" ? "text-white" : ""
+              }`}
             >
               CONTACT
-              <span className="absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 group-hover:w-full group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 inline-block"></span>
+              <span
+                className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
+                  activePage === "/contact"
+                    ? "w-full left-1/2 -translate-x-1/2"
+                    : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                }`}
+              ></span>
             </a>
           </li>
         </ul>
