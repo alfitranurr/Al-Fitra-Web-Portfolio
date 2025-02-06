@@ -12,7 +12,7 @@ const NavbarMobile: React.FC = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Left-aligned text */}
         <div className="text-white text-lg font-semibold">
-          Al Fitra's Portfolio
+          Ramdhani's Portfolio
         </div>
 
         {/* Hamburger button */}
@@ -36,7 +36,7 @@ const NavbarMobile: React.FC = () => {
 
       {/* Menu (hidden or visible based on isOpen state) */}
       <div
-        className={`lg:hidden fixed top-0 right-0 w-2/3 h-full bg-[#474E68] p-4 transition-transform duration-300 ease-in-out transform ${
+        className={`lg:hidden fixed top-0 right-0 w-1/2 h-full bg-[#474E68] p-4 transition-transform duration-300 ease-in-out transform ${
           isOpen ? "translate-x-2 shadow-xl" : "translate-x-full"
         }`}
       >
@@ -64,7 +64,7 @@ const NavbarMobile: React.FC = () => {
         </div>
 
         {/* Navigation links */}
-        <ul className="space-y-4 text-center mt-8">
+        <ul className="space-y-4 text-left mt-8">
           <li className="text-sm text-white relative group">
             <a
               href="#"
