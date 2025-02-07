@@ -4,6 +4,9 @@ import Navbar from "./main/navbar";
 import Footer from "./main/footer";
 import NavbarMobile from "./mobile/navbar_mobile";
 import FooterMobile from "./mobile/footer_mobile";
+import Home from "./pages/home";
+// import ABOUTME from "./pages/about_me";
+// import Professional from "./pages/professional";
 
 const App: React.FC = () => {
   return (
@@ -24,10 +27,10 @@ const App: React.FC = () => {
         <div className="flex-grow">
           <Routes>
             {/* Define routes for main pages here */}
-            <Route path="/" element={<div></div>} />
-            <Route path="/about" element={<div></div>} />
-            <Route path="/services" element={<div></div>} />
-            <Route path="/contact" element={<div></div>} />
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/about_me" element={<ABOUTME />} /> */}
+            {/* <Route path="/professional" element={<Professional />} /> */}
+            {/* <Route path="/contact" element={<div></div>} /> */}
             {/* Add other routes for additional pages */}
           </Routes>
         </div>
