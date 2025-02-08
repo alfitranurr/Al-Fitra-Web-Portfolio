@@ -7,6 +7,8 @@ import {
   SiPostgresql,
   SiGooglecolab,
   SiMysql,
+  SiTableau,
+  SiGooglebigquery,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -37,13 +39,21 @@ const techStacks = [
   { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-3xl" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-3xl" /> },
   { name: "MySQL", icon: <SiMysql className="text-blue-600 text-3xl" /> },
+  {
+    name: "Tableau",
+    icon: <SiTableau className="text-blue-600 text-3xl" />,
+  },
+  {
+    name: "Google BigQuery",
+    icon: <SiGooglebigquery className="text-blue-500 text-3xl" />,
+  },
 ];
 
 const InfiniteScroll = () => {
   return (
     <div className="bg-[var(--base-color)] p-4 rounded-xl shadow-md text-white max-w-[22rem] mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
       <h2 className="text-lg font-semibold text-center mb-3 w-full">
-        Tech Stacks
+        Tech Stacks I'm Familian With
       </h2>
       <div className="relative w-full overflow-hidden flex flex-col items-center">
         {[0, 1].map((row) => (
@@ -51,37 +61,27 @@ const InfiniteScroll = () => {
             key={row}
             className="flex space-x-4 mb-3"
             animate={{
-              x: row === 0 ? [0, -1000] : [0, 1000], // Adjusted for smoother transition
+              x: row === 0 ? [0, -1000] : [0, 1000],
             }}
             transition={{
               ease: "linear",
               repeat: Infinity,
-              duration: 30, // Slowed down the duration to make it smoother
+              duration: 60,
             }}
             style={{ display: "flex", flexWrap: "nowrap" }}
           >
-            {[
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-              ...techStacks,
-            ].map((tech, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center min-w-[80px]"
-              >
-                {tech.icon}
-                <span className="text-xs mt-1">{tech.name}</span>
-              </div>
-            ))}
+            {Array(100)
+              .fill([...techStacks])
+              .flat()
+              .map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center min-w-[80px]"
+                >
+                  {tech.icon}
+                  <span className="text-xs mt-1">{tech.name}</span>
+                </div>
+              ))}
           </motion.div>
         ))}
       </div>
