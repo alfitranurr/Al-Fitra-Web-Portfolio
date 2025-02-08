@@ -1,4 +1,5 @@
 // src/pages/about_me.tsx
+
 const AboutMe = () => {
   return (
     <section id="about-me" className="flex justify-center mt-6 px-4">
