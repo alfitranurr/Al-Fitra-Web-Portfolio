@@ -53,7 +53,7 @@ const InfiniteScroll = () => {
   return (
     <div className="bg-[var(--base-color)] p-4 rounded-xl shadow-md text-white max-w-[22rem] mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
       <h2 className="text-lg font-semibold text-center mb-3 w-full">
-        Tech Stacks I'm Familian With
+        Tech Stacks I'm Familiar With
       </h2>
       <div className="relative w-full overflow-hidden flex flex-col items-center">
         {[0, 1].map((row) => (

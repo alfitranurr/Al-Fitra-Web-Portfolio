@@ -4,11 +4,18 @@ import AboutMe from "../pages/about_me";
 import Professional from "../pages/professional";
 import MapCard from "../components/MapCard/mapcard";
 import { ArrowUp } from "lucide-react";
+import { Circle } from "lucide-react"; // Import dot icon from lucide-react
 
 const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    // Set a timeout to simulate the component loading
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100); // Adjust delay here if needed
+
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setShowScroll(true);
@@ -18,7 +25,9 @@ const Home: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
+      clearTimeout(timer); // Cleanup the timeout
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -29,28 +38,33 @@ const Home: React.FC = () => {
 
   const name = "Al Fitra Nur Ramadhani";
 
+  // Array for looping items
+  const items = [
+    "Web Portfolio",
+    "Data Analyst",
+    "Data Engineering",
+    "Digital Marketing Enthusiast",
+  ];
+
   return (
     <div
       className="flex flex-col justify-center items-center min-h-screen relative"
       style={{ backgroundColor: "var(--base-color)" }}
     >
-      <div className="text-center text-white mt-50">
+      <div className="text-center text-white mt-45">
         <h1 className="text-2xl font-light">
           Hello, I<span style={{ color: "var(--warna3-color)" }}>'</span>m
         </h1>
 
         <h2 className="text-2xl font-semibold mt-2">
-          {/* Split by spaces and animate each letter */}
           {name.split(" ").map((word, wordIndex) => (
             <span key={wordIndex} className="inline-block mr-2">
-              {" "}
-              {/* Add margin between words */}
               {word.split("").map((letter, index) => (
                 <motion.span
                   key={index}
                   className="inline-block"
                   whileHover={{
-                    y: -10, // Lift the letter up
+                    y: -10,
                     transition: { type: "spring", stiffness: 300, damping: 20 },
                   }}
                   style={{ color: "white" }}
@@ -62,29 +76,93 @@ const Home: React.FC = () => {
           ))}
         </h2>
 
-        {/* Sekat garis above the description, will stretch according to content */}
         <div
           className="border-t border-white w-full my-4 mx-auto"
           style={{ maxWidth: "85%" }}
         ></div>
 
-        <p className="text-lg font-light mt-4 mb-80">
+        <p className="text-lg font-light mt-4 mb-65">
           Data Enthusiast | Digital Marketing Enthusiast
         </p>
       </div>
 
+      {/* Kotak Putih */}
+      <div
+        className="w-full h-8 bg-white mt-4 overflow-hidden flex items-center justify-center shadow-lg"
+        style={{
+          transform: "rotate(-1deg) translateY(5px) translateX(-2px)", // Rotate the box by 45 degrees
+          transformOrigin: "center", // Ensure the rotation is centered
+        }}
+      >
+        <motion.div
+          className="flex items-center justify-start space-x-50 text-xs sm:text-sm md:text-sm font-semibold text-gray-800 text-center whitespace-nowrap"
+          animate={isLoaded ? { x: ["58%", "-30%"] } : {}} // Trigger animation only after loading
+          transition={{
+            repeat: Infinity, // Repeat the animation forever
+            repeatType: "loop", // Loop the animation
+            duration: 130, // Duration of one loop (faster speed for continuous movement)
+            ease: "linear", // Smooth, continuous movement
+          }}
+        >
+          {/* Duplicated items using array for continuous scroll */}
+          {Array.from({ length: 30 }).map((_, index) => (
+            <span
+              key={index}
+              className="flex items-center text-xs sm:text-sm md:text-sm whitespace-nowrap"
+            >
+              <Circle size={10} className="mr-2" />{" "}
+              {items[index % items.length]}
+            </span>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Kotak Ungu */}
+      <div
+        className="w-full h-8 bg-[var(--warna2-color)] mt-0 overflow-hidden flex items-center justify-center px-0 shadow-lg"
+        style={{
+          transform: "rotate(1deg) translateY(-20px) translateX(-2px)", // Adjust translateX to move the box further left
+          transformOrigin: "center",
+        }}
+      >
+        <motion.div
+          className="flex items-center justify-start space-x-50 text-xs sm:text-sm md:text-sm font-semibold text-white text-center whitespace-nowrap"
+          animate={isLoaded ? { x: ["-58%", "30%"] } : {}} // Start from right and move left
+          transition={{
+            repeat: Infinity, // Repeat the animation forever
+            repeatType: "loop", // Loop the animation
+            duration: 130, // Duration of one loop (faster speed for continuous movement)
+            ease: "linear", // Smooth, continuous movement
+          }}
+        >
+          {/* Duplicated items using array for continuous scroll */}
+          {Array.from({ length: 30 }).map((_, index) => (
+            <span
+              key={index}
+              className="flex items-center text-xs sm:text-sm md:text-sm whitespace-nowrap"
+            >
+              <Circle size={10} className="mr-2" />{" "}
+              {items[index % items.length]}
+            </span>
+          ))}
+        </motion.div>
+      </div>
+
       {/* Add id for IntersectionObserver to detect */}
-      <section id="about-me">
+      <section
+        id="about-me"
+        style={{
+          position: "relative",
+          top: "-60px", // Move the About Me section up (adjust as needed)
+        }}
+      >
         <AboutMe />
       </section>
 
-      {/* Render Professional below AboutMe */}
       <Professional />
-
-      {/* Render Map below AboutMe */}
       <MapCard />
 
-      {/* Tombol Scroll ke Atas */}
+      {/* Scroll to Top Button */}
       {showScroll && (
         <button
           onClick={scrollToTop}
