@@ -1,5 +1,5 @@
-// src/pages/Home.tsx
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import AboutMe from "../pages/about_me";
 import Professional from "../pages/professional";
 import MapCard from "../components/MapCard/mapcard";
@@ -27,6 +27,8 @@ const Home: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const name = "Al Fitra Nur Ramadhani";
+
   return (
     <div
       className="flex flex-col justify-center items-center min-h-screen relative"
@@ -38,8 +40,26 @@ const Home: React.FC = () => {
         </h1>
 
         <h2 className="text-2xl font-semibold mt-2">
-          Al Fitra Nur Ramadhani
-          <span style={{ color: "var(--warna3-color)" }}>.</span>
+          {/* Split by spaces and animate each letter */}
+          {name.split(" ").map((word, wordIndex) => (
+            <span key={wordIndex} className="inline-block mr-2">
+              {" "}
+              {/* Add margin between words */}
+              {word.split("").map((letter, index) => (
+                <motion.span
+                  key={index}
+                  className="inline-block"
+                  whileHover={{
+                    y: -10, // Lift the letter up
+                    transition: { type: "spring", stiffness: 300, damping: 20 },
+                  }}
+                  style={{ color: "white" }}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </span>
+          ))}
         </h2>
 
         {/* Sekat garis above the description, will stretch according to content */}
@@ -48,7 +68,7 @@ const Home: React.FC = () => {
           style={{ maxWidth: "85%" }}
         ></div>
 
-        <p className="text-lg font-light mt-4 mb-70">
+        <p className="text-lg font-light mt-4 mb-80">
           Data Enthusiast | Digital Marketing Enthusiast
         </p>
       </div>
