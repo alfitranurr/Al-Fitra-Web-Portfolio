@@ -1,3 +1,7 @@
+// Import images
+import LogoUMM from "../assets/images/Logo UMM Color.png"; // Correct import for UMM logo
+import LogoIsyKarima from "../assets/images/Logo Isy Karima.png"; // Correct import for Isy Karima logo
+
 const EducationCard = () => {
   return (
     <section
@@ -12,7 +16,7 @@ const EducationCard = () => {
       <div className="bg-warna1-color p-6 rounded-lg shadow-lg w-full max-w-3xl mx-auto transform transition-all duration-300 hover:scale-95 hover:shadow-2xl">
         <div className="flex items-center space-x-4">
           <img
-            src="src/assets/images/Logo UMM Color.png"
+            src={LogoUMM} // Use the imported image variable
             alt="University Logo"
             className="w-12 h-12"
           />
@@ -34,7 +38,7 @@ const EducationCard = () => {
       <div className="bg-warna1-color p-6 rounded-lg shadow-lg w-full max-w-4xl mx-auto transform transition-all duration-300 hover:scale-95 hover:shadow-2xl">
         <div className="flex items-center space-x-4">
           <img
-            src="src/assets/images/Logo Isy Karima.png"
+            src={LogoIsyKarima} // Use the imported image variable
             alt="Another University Logo"
             className="w-12 h-12"
           />

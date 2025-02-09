@@ -1,6 +1,10 @@
 import { useState } from "react";
 import RiseDown from "./RiseDown"; // Import the RiseDown component
 
+// Import images
+import LogoDSCUMM from "../../assets/images/Logo DSC UMM.png"; // Correct way to import the image
+import LogoSDGsUMM from "../../assets/images/Logo SDGs UMM.png"; // Correct way to import the second image
+
 const CommitteesOrganizationsCard = () => {
   const [openCard1, setOpenCard1] = useState<boolean>(false);
   const [openCard2, setOpenCard2] = useState<boolean>(false);
@@ -22,7 +26,7 @@ const CommitteesOrganizationsCard = () => {
       >
         <div className="flex items-center space-x-4 mb-4">
           <img
-            src="src/assets/images/Logo DSC UMM.png" // Add your image path here
+            src={LogoDSCUMM} // Using the imported image
             alt="Committee Logo"
             className="w-12 h-12"
           />
@@ -61,7 +65,7 @@ const CommitteesOrganizationsCard = () => {
       >
         <div className="flex items-center space-x-4 mb-4">
           <img
-            src="src/assets/images/Logo SDGs UMM.png" // Add your image path here
+            src={LogoSDGsUMM} // Using the imported image
             alt="Committee Logo 2"
             className="w-12 h-12"
           />
