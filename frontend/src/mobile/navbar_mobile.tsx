@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavbarMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +9,22 @@ const NavbarMobile: React.FC = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleSetActive = (page: string) => {
+    setActivePage(page);
+  };
+
+  const handleNavigateToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to the top
+  };
+
+  // Scroll to the specific section
+  const handleScrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
@@ -33,10 +49,10 @@ const NavbarMobile: React.FC = () => {
 
   return (
     <div>
-      <nav className="bg-[#474E68] p-4 shadow-lg fixed top-0 left-0 w-full z-50 mb-10">
+      <nav className="bg-[#474E68] p-4 shadow-lg fixed top-0 left-0 w-full z-[9999] mb-10">
         {/* Progress Bar */}
         <div
-          className="fixed top-0 left-0 right-0 h-0.5 bg-white z-20 transition-all duration-800"
+          className="fixed top-0 left-0 right-0 h-0.5 bg-white z-[9998] transition-all duration-800"
           style={{ width: `${scrollProgress}%` }}
         ></div>
 
@@ -69,7 +85,7 @@ const NavbarMobile: React.FC = () => {
         <div
           className={`lg:hidden fixed top-0 left-0 w-1/2 h-full bg-[#474E68] p-4 transition-transform duration-300 ease-in-out transform ${
             isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"
-          }`}
+          } z-[9999]`}
         >
           <div className="flex justify-between items-center">
             <div className="text-white text-lg font-semibold">
@@ -97,136 +113,157 @@ const NavbarMobile: React.FC = () => {
           {/* Navigation links */}
           <ul className="space-y-4 text-left mt-8 mb-8">
             {/* HOME */}
-            <li className="text-sm text-white relative group">
-              <a
-                href="#"
-                className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
-                  activePage === "/" ? "text-white" : ""
+            <li className="text-xs text-white relative group">
+              <button
+                onClick={() => {
+                  handleSetActive("/"); // Set active page to "/"
+                  handleNavigateToTop(); // Scroll to the top
+                }}
+                className={`hover:text-white transition-all duration-300 transform ${
+                  activePage === "/" ? "text-white" : "text-white"
                 }`}
               >
                 HOME
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
                     activePage === "/"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </a>
+              </button>
             </li>
 
             {/* ABOUT ME */}
-            <li className="text-sm text-white relative group">
-              <a
-                href="#about-me"
-                className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
-                  activePage === "/about-me" ? "text-white" : ""
+            <li className="text-xs text-white relative group">
+              <button
+                onClick={() => {
+                  handleSetActive("about-me");
+                  handleScrollToSection("about-me");
+                }}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "about-me" ? "text-white" : "text-white"
                 }`}
               >
                 ABOUT ME
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/about-me"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "about-me"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </a>
-            </li>
-
-            {/* PROFESSIONAL */}
-            <li className="text-sm text-white relative group">
-              <a
-                href="#professional"
-                className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
-                  activePage === "/professional" ? "text-white" : ""
-                }`}
-              >
-                PROFESSIONAL
-                <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/professional"
-                      ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
-                  }`}
-                ></span>
-              </a>
+              </button>
             </li>
 
             {/* EDUCATION */}
-            <li className="text-sm text-white relative group">
-              <a
-                href="#education"
-                className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
-                  activePage === "/education" ? "text-white" : ""
+            <li className="text-xs text-white relative group">
+              <button
+                onClick={() => {
+                  handleSetActive("education");
+                  handleScrollToSection("education");
+                }}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "education" ? "text-white" : "text-white"
                 }`}
               >
                 EDUCATION
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/education"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "education"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </a>
+              </button>
+            </li>
+
+            {/* EXPERIENCE */}
+            <li className="text-xs text-white relative group">
+              <button
+                onClick={() => {
+                  handleSetActive("experience");
+                  handleScrollToSection("experience");
+                }}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "professional" ? "text-white" : "text-white"
+                }`}
+              >
+                EXPERIENCE
+                <span
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "professional"
+                      ? "w-full left-1/2 -translate-x-1/2"
+                      : "w-0 group-hover:w-full group-hover:left-0"
+                  }`}
+                ></span>
+              </button>
             </li>
 
             {/* PROJECTS */}
-            <li className="text-sm text-white relative group">
-              <a
-                href="#projects"
-                className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
-                  activePage === "/projects" ? "text-white" : ""
+            <li className="text-xs text-white relative group">
+              <button
+                onClick={() => {
+                  handleSetActive("projects");
+                  handleScrollToSection("projects");
+                }}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "projects" ? "text-white" : "text-white"
                 }`}
               >
                 PROJECTS
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/projects"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "projects"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </a>
+              </button>
             </li>
 
             {/* CERTIFICATE */}
-            <li className="text-sm text-white relative group">
-              <a
-                href="#certificate"
-                className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
-                  activePage === "/certificate" ? "text-white" : ""
+            <li className="text-xs text-white relative group">
+              <button
+                onClick={() => {
+                  handleSetActive("certificate");
+                  handleScrollToSection("certificate");
+                }}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "certificate" ? "text-white" : "text-white"
                 }`}
               >
                 CERTIFICATE
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/certificate"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "certificate"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </a>
+              </button>
             </li>
 
             {/* CONTACT */}
-            <li className="text-sm text-white relative group">
-              <a
-                href="#contact"
-                className={`hover:text-white transition-all duration-300 transform group-hover:scale-110 ${
-                  activePage === "/contact" ? "text-white" : ""
+            <li className="text-xs text-white relative group">
+              <button
+                onClick={() => {
+                  handleSetActive("contact");
+                  handleScrollToSection("contact");
+                }}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "contact" ? "text-white" : "text-white"
                 }`}
               >
                 CONTACT
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/contact"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "contact"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-1/2 group-hover:-translate-x-1/2"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </a>
+              </button>
             </li>
           </ul>
         </div>
