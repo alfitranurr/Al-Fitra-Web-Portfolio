@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 interface RiseDownProps {
@@ -7,13 +8,14 @@ interface RiseDownProps {
 
 const RiseDown: React.FC<RiseDownProps> = ({ isOpen, children }) => {
   return (
-    <div
-      className={`overflow-hidden transition-all duration-1000 ease-in-out ${
-        isOpen ? "max-h-[500px]" : "max-h-0"
-      }`}
+    <motion.div
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+      transition={{ duration: 0.3 }}
+      className="overflow-hidden"
     >
-      {isOpen && <div className="text-white text-sm mb-4">{children}</div>}
-    </div>
+      <div className="text-white text-sm mb-4">{children}</div>
+    </motion.div>
   );
 };
 
