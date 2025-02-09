@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
                   id="name"
                   placeholder="Your name"
                   className="p-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
-                  style={{ borderColor: "white" }}
+                  style={{ borderColor: "rgba(255, 255, 255, 0.5)" }}
                 />
               </div>
               <div className="flex flex-col">
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
                   id="email"
                   placeholder="Your email"
                   className="p-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
-                  style={{ borderColor: "white" }}
+                  style={{ borderColor: "rgba(255, 255, 255, 0.5)" }}
                 />
               </div>
               <div className="flex flex-col">
@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                   placeholder="Your message"
                   className="p-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
                   rows={4}
-                  style={{ borderColor: "white" }}
+                  style={{ borderColor: "rgba(255, 255, 255, 0.5)" }}
                 />
               </div>
               <div className="flex justify-center">

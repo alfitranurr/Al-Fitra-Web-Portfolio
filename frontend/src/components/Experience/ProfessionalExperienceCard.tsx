@@ -33,7 +33,7 @@ const ProfessionalExperienceCard = () => {
               Web Development • Bussiness Development • Graphic Design
             </h3>
             <p className="text-warna3-color text-sm">
-              CV. Indo Azka Konsultan • 2023 - Present
+              CV. Indo Azka Konsultan • Jan 2025 - Present
             </p>
             <p className="text-warna3-color text-sm">
               Malang, East Java, Indonesia
