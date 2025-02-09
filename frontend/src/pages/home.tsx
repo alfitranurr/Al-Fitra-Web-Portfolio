@@ -85,16 +85,16 @@ const Home: React.FC = () => {
           style={{ maxWidth: "85%" }}
         ></div>
 
-        <p className="text-lg font-light mt-4 mb-65">
+        <p className="text-lg font-light mt-4 mb-70">
           Data Enthusiast | Digital Marketing Enthusiast
         </p>
       </div>
 
       {/* Kotak Putih */}
       <div
-        className="w-full h-8 bg-white mt-4 overflow-hidden flex items-center justify-center shadow-lg"
+        className="w-full h-8 bg-white mt-4 mb-[-35px] overflow-hidden flex items-center justify-center shadow-lg"
         style={{
-          transform: "rotate(-1deg) translateY(5px) translateX(-2px)", // Rotate the box by 45 degrees
+          transform: "rotate(-1deg) translateY(-10px) translateX(-2px)", // Rotate the box by 45 degrees
           transformOrigin: "center", // Ensure the rotation is centered
         }}
       >
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
 
       {/* Kotak Ungu */}
       <div
-        className="w-full h-8 bg-[var(--warna2-color)] mt-0 overflow-hidden flex items-center justify-center px-0 shadow-lg"
+        className="w-full h-8 bg-[var(--warna2-color)] mt-0 mb-[-35px] overflow-hidden flex items-center justify-center px-0 shadow-lg"
         style={{
           transform: "rotate(1deg) translateY(-20px) translateX(-2px)", // Adjust translateX to move the box further left
           transformOrigin: "center",
