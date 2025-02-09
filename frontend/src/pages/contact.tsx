@@ -1,4 +1,5 @@
 import React from "react";
+import { FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Contact: React.FC = () => {
       style={{ backgroundColor: "var(--base-color)" }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-6 w-full">
-        {/* Right section (contact info) */}
+        {/* Left section (contact info) */}
         <div className="space-y-6 text-white flex flex-col justify-start">
           <h2 className="text-lg font-bold text-left">Get In Touch</h2>
           <p className="text-sm text-left">
@@ -17,6 +18,42 @@ const Contact: React.FC = () => {
             feel free to drop me a message. I'm looking forward to hearing from
             you!
           </p>
+
+          {/* Social Media Links */}
+          <div className="flex space-x-6 text-white">
+            <a
+              href="https://www.instagram.com/rmdhani_ii/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#E1306C] hover:scale-120 transition-all duration-300"
+            >
+              <FaInstagram size={22} />
+            </a>
+            <a
+              href="https://wa.me/+6285158779239"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#25D366] hover:scale-120 transition-all duration-300"
+            >
+              <FaWhatsapp size={22} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/al-fitra-nur-ramadhani/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#0077B5] hover:scale-120 transition-all duration-300"
+            >
+              <FaLinkedin size={22} />
+            </a>
+            <a
+              href="https://github.com/alfitranurr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#333] hover:scale-120 transition-all duration-300"
+            >
+              <FaGithub size={22} />
+            </a>
+          </div>
 
           <div className="space-y-4 text-left">
             <div>
@@ -57,7 +94,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Left section (contact form) */}
+        {/* Right section (contact form) */}
         <div className="space-y-4">
           <div className="p-6 bg-white/20 backdrop-blur-md rounded-lg shadow-md">
             <form className="space-y-4">
