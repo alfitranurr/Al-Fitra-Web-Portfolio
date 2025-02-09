@@ -9,7 +9,7 @@ const EducationCard = () => {
       className="w-full p-4 bg-white/20 backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center mt-20 space-y-2" // Added space-y-2 for spacing between cards
     >
       <h2 className="text-lg font-semibold text-white mb-6 w-full text-center">
-        Education
+        EDUCATION
       </h2>
 
       {/* University of Muhammadiyah Malang */}

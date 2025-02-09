@@ -4,6 +4,7 @@ import AboutMe from "../pages/about_me";
 import Professional from "../pages/professional";
 import Education from "../pages/education";
 import Experience from "../pages/experience";
+import Projects from "../pages/projects";
 import Contact from "../pages/contact";
 import MapCard from "../components/MapCard/mapcard";
 
@@ -167,7 +168,7 @@ const Home: React.FC = () => {
       {/* Wrap Education and Experience in a flex container */}
       <div
         className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 mt-8"
-        style={{ maxWidth: "1100px", width: "90%", margin: "0 auto" }}
+        style={{ maxWidth: "1130px", width: "90%", margin: "0 auto" }}
       >
         <section
           id="education"
@@ -191,6 +192,16 @@ const Home: React.FC = () => {
           <Experience />
         </section>
       </div>
+
+      <section
+        id="projects"
+        className="scroll-margin-top-16"
+        style={{
+          position: "relative",
+        }}
+      >
+        <Projects />
+      </section>
 
       <section
         id="contact"
