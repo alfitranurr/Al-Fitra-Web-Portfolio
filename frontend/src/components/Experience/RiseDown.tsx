@@ -11,7 +11,7 @@ const RiseDown: React.FC<RiseDownProps> = ({ isOpen, children }) => {
     <motion.div
       initial={{ height: 0, opacity: 0 }}
       animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.4 }}
       className="overflow-hidden"
     >
       <div className="text-white text-sm mb-4">{children}</div>
