@@ -52,7 +52,7 @@ const NavbarMobile: React.FC = () => {
       <nav className="bg-[#474E68] p-4 shadow-lg fixed top-0 left-0 w-full z-[9999] mb-10">
         {/* Progress Bar */}
         <div
-          className="fixed top-0 left-0 right-0 h-0.5 bg-white z-[9998] transition-all duration-800"
+          className="fixed top-0 left-0 right-0 h-0.5 bg-white z-[10000] transition-all duration-800"
           style={{ width: `${scrollProgress}%` }}
         ></div>
 

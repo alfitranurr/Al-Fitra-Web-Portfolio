@@ -62,45 +62,45 @@ const Contact: React.FC = () => {
           <div className="p-6 bg-white/20 backdrop-blur-md rounded-lg shadow-md">
             <form className="space-y-4">
               <div className="flex flex-col">
-                <label htmlFor="name" className="mb-2 text-md text-white">
+                <label htmlFor="name" className="mb-2 text-sm text-white">
                   Your Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   placeholder="Your name"
-                  className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
-                  style={{ borderColor: "var(--warna1-color)" }}
+                  className="p-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
+                  style={{ borderColor: "white" }}
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="email" className="mb-2 text-md text-white">
+                <label htmlFor="email" className="mb-2 text-sm text-white">
                   Your Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   placeholder="Your email"
-                  className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
-                  style={{ borderColor: "var(--warna1-color)" }}
+                  className="p-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
+                  style={{ borderColor: "white" }}
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="message" className="mb-2 text-md text-white">
+                <label htmlFor="message" className="mb-2 text-sm text-white">
                   Your Message (optional)
                 </label>
                 <textarea
                   id="message"
                   placeholder="Your message"
-                  className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
+                  className="p-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-var(--warna2-color)"
                   rows={4}
-                  style={{ borderColor: "var(--warna1-color)" }}
+                  style={{ borderColor: "white" }}
                 />
               </div>
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="bg-var(--warna2-color) text-white p-3 rounded-md w-full transition duration-200 text-md"
+                  className="bg-var(--warna2-color) text-white p-3 rounded-md w-full transition duration-200 text-sm"
                   style={{
                     backgroundColor: "var(--warna2-color)",
                     borderColor: "var(--warna2-color)",
