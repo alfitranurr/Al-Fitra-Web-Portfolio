@@ -9,16 +9,17 @@ import MapCard from "../components/MapCard/mapcard";
 
 import { ArrowUp } from "lucide-react";
 import { Circle } from "lucide-react"; // Import dot icon from lucide-react
+import { useLocation } from "react-router-dom"; // Import useLocation to detect path
 
 const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const location = useLocation(); // Get current route
 
   useEffect(() => {
-    // Set a timeout to simulate the component loading
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 100); // Adjust delay here if needed
+    }, 100);
 
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      clearTimeout(timer); // Cleanup the timeout
+      clearTimeout(timer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -49,6 +50,14 @@ const Home: React.FC = () => {
     "Data Engineering",
     "Digital Marketing Enthusiast",
   ];
+
+  // Check if the current location path matches a specific section for active state
+  const getActiveClass = (section: string) => {
+    return location.pathname === `/${section}` ||
+      location.hash === `#${section}`
+      ? "text-white"
+      : "";
+  };
 
   return (
     <div
