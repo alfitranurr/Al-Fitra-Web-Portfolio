@@ -1,5 +1,7 @@
 import { useState } from "react";
 import RiseDown from "./RiseDown"; // Import the new RiseDown component
+import LogoAzkaGroup from "../../assets/images/Logo Azka Group.png"; // Pastikan path relatif sesuai
+import LogoMetadari from "../../assets/images/Logo Metadari.png"; // Pastikan path relatif sesuai
 
 const ProfessionalExperienceCard = () => {
   const [openCard1, setOpenCard1] = useState<boolean>(false);
@@ -22,7 +24,7 @@ const ProfessionalExperienceCard = () => {
       >
         <div className="flex items-center space-x-4 mb-4">
           <img
-            src="src/assets/images/Logo Azka Group.png" // Add your image path here
+            src={LogoAzkaGroup} // Using the imported image variable
             alt="Professional Experience Logo"
             className="w-12 h-12"
           />
@@ -53,7 +55,7 @@ const ProfessionalExperienceCard = () => {
       >
         <div className="flex items-center space-x-4 mb-4">
           <img
-            src="src/assets/images/Logo Metadari.png" // Add your image path here
+            src={LogoMetadari} // Using the imported image variable
             alt="Professional Experience Logo 2"
             className="w-12 h-12"
           />
