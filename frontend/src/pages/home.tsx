@@ -9,16 +9,17 @@ import MapCard from "../components/MapCard/mapcard";
 
 import { ArrowUp } from "lucide-react";
 import { Circle } from "lucide-react"; // Import dot icon from lucide-react
+import { useLocation } from "react-router-dom"; // Import useLocation to detect path
 
 const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const location = useLocation(); // Get current route
 
   useEffect(() => {
-    // Set a timeout to simulate the component loading
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 100); // Adjust delay here if needed
+    }, 100);
 
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      clearTimeout(timer); // Cleanup the timeout
+      clearTimeout(timer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -49,6 +50,14 @@ const Home: React.FC = () => {
     "Data Engineering",
     "Digital Marketing Enthusiast",
   ];
+
+  // Check if the current location path matches a specific section for active state
+  const getActiveClass = (section: string) => {
+    return location.pathname === `/${section}` ||
+      location.hash === `#${section}`
+      ? "text-white"
+      : "";
+  };
 
   return (
     <div
@@ -152,11 +161,33 @@ const Home: React.FC = () => {
         </motion.div>
       </div>
 
+      {/* Navigation Links */}
+      <div className="flex space-x-4 mt-4">
+        <a href="#about-me" className={`text-lg ${getActiveClass("about-me")}`}>
+          About Me
+        </a>
+        <a
+          href="#education"
+          className={`text-lg ${getActiveClass("education")}`}
+        >
+          Education
+        </a>
+        <a
+          href="#experience"
+          className={`text-lg ${getActiveClass("experience")}`}
+        >
+          Experience
+        </a>
+        <a href="#contact" className={`text-lg ${getActiveClass("contact")}`}>
+          Contact
+        </a>
+      </div>
+
       <section
         id="about-me"
+        className="scroll-margin-top-16"
         style={{
           position: "relative",
-          top: "-60px",
         }}
       >
         <AboutMe />
@@ -172,6 +203,7 @@ const Home: React.FC = () => {
       >
         <section
           id="education"
+          className="scroll-margin-top-16"
           style={{
             position: "relative",
             flex: 1, // Ensures it takes available space
@@ -182,6 +214,7 @@ const Home: React.FC = () => {
 
         <section
           id="experience"
+          className="scroll-margin-top-16"
           style={{
             position: "relative",
             flex: 1, // Ensures it takes available space
@@ -193,6 +226,7 @@ const Home: React.FC = () => {
 
       <section
         id="contact"
+        className="scroll-margin-top-16"
         style={{
           position: "relative",
         }}
