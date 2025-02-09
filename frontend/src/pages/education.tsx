@@ -1,6 +1,6 @@
 // Import images
-import LogoUMM from "../../assets/images/Logo UMM Color.png"; // Correct import for UMM logo
-import LogoIsyKarima from "../../assets/images/Logo Isy Karima.png"; // Correct import for Isy Karima logo
+import LogoUMM from "../assets/images/Logo UMM Color.png"; // Correct import for UMM logo
+import LogoIsyKarima from "../assets/images/Logo Isy Karima.png"; // Correct import for Isy Karima logo
 
 const EducationCard = () => {
   return (
