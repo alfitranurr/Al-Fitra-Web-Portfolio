@@ -186,7 +186,7 @@ const NavbarMobile: React.FC = () => {
                   handleScrollToSection("experience");
                 }}
                 className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
-                  activePage === "professional" ? "text-white" : "text-white"
+                  activePage === "experience" ? "text-white" : "text-white"
                 }`}
               >
                 EXPERIENCE
