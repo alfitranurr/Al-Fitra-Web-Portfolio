@@ -9,12 +9,10 @@ import MapCard from "../components/MapCard/mapcard";
 
 import { ArrowUp } from "lucide-react";
 import { Circle } from "lucide-react"; // Import dot icon from lucide-react
-import { useLocation } from "react-router-dom"; // Import useLocation to detect path
 
 const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const location = useLocation(); // Get current route
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -50,14 +48,6 @@ const Home: React.FC = () => {
     "Data Engineering",
     "Digital Marketing Enthusiast",
   ];
-
-  // Check if the current location path matches a specific section for active state
-  const getActiveClass = (section: string) => {
-    return location.pathname === `/${section}` ||
-      location.hash === `#${section}`
-      ? "text-white"
-      : "";
-  };
 
   return (
     <div
@@ -159,28 +149,6 @@ const Home: React.FC = () => {
             </span>
           ))}
         </motion.div>
-      </div>
-
-      {/* Navigation Links */}
-      <div className="flex space-x-4 mt-4">
-        <a href="#about-me" className={`text-lg ${getActiveClass("about-me")}`}>
-          About Me
-        </a>
-        <a
-          href="#education"
-          className={`text-lg ${getActiveClass("education")}`}
-        >
-          Education
-        </a>
-        <a
-          href="#experience"
-          className={`text-lg ${getActiveClass("experience")}`}
-        >
-          Experience
-        </a>
-        <a href="#contact" className={`text-lg ${getActiveClass("contact")}`}>
-          Contact
-        </a>
       </div>
 
       <section
