@@ -53,7 +53,7 @@ const Home: React.FC = () => {
   return (
     <div
       className="flex flex-col justify-center items-center min-h-screen relative"
-      style={{ backgroundColor: "var(--base-color)" }}
+      // style={{ backgroundColor: "var(--base-color)" }}
     >
       <div className="text-center text-white mt-45">
         <h1 className="text-2xl font-light">
