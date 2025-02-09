@@ -192,7 +192,7 @@ const NavbarMobile: React.FC = () => {
                 EXPERIENCE
                 <span
                   className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
-                    activePage === "professional"
+                    activePage === "experience"
                       ? "w-full left-1/2 -translate-x-1/2"
                       : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
