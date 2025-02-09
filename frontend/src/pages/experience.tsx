@@ -32,7 +32,7 @@ const Experience = () => {
             onClick={() => handleTabClick("professional")}
             className={`px-4 py-1 text-xs font-semibold cursor-pointer ${
               activeTab === "professional"
-                ? "bg-white text-[var(--warna1-color)] rounded-full shadow-md"
+                ? "bg-white text-[var(--base-color)] rounded-full shadow-md"
                 : "text-gray-300 hover:bg-gray-500 rounded-full"
             } transition-all duration-200 ease-in-out mx-2`}
           >
@@ -44,7 +44,7 @@ const Experience = () => {
             onClick={() => handleTabClick("committees")}
             className={`px-4 py-1 text-xs font-semibold cursor-pointer ${
               activeTab === "committees"
-                ? "bg-white text-[var(--warna1-color)] rounded-full shadow-md"
+                ? "bg-white text-[var(--base-color)] rounded-full shadow-md"
                 : "text-gray-300 hover:bg-gray-500 rounded-full"
             } transition-all duration-200 ease-in-out mx-2`}
           >
