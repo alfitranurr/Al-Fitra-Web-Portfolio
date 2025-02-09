@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import AboutMe from "../pages/about_me";
 import Professional from "../pages/professional";
+import Education from "../pages/education";
+import Experience from "../pages/experience";
+import Contact from "../pages/contact";
 import MapCard from "../components/MapCard/mapcard";
+
 import { ArrowUp } from "lucide-react";
 import { Circle } from "lucide-react"; // Import dot icon from lucide-react
 
@@ -148,12 +152,11 @@ const Home: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Add id for IntersectionObserver to detect */}
       <section
         id="about-me"
         style={{
           position: "relative",
-          top: "-60px", // Move the About Me section up (adjust as needed)
+          top: "-60px",
         }}
       >
         <AboutMe />
@@ -161,6 +164,41 @@ const Home: React.FC = () => {
 
       <Professional />
       <MapCard />
+
+      {/* Wrap Education and Experience in a flex container */}
+      <div
+        className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 mt-8"
+        style={{ maxWidth: "1100px", width: "90%", margin: "0 auto" }}
+      >
+        <section
+          id="education"
+          style={{
+            position: "relative",
+            flex: 1, // Ensures it takes available space
+          }}
+        >
+          <Education />
+        </section>
+
+        <section
+          id="experience"
+          style={{
+            position: "relative",
+            flex: 1, // Ensures it takes available space
+          }}
+        >
+          <Experience />
+        </section>
+      </div>
+
+      <section
+        id="contact"
+        style={{
+          position: "relative",
+        }}
+      >
+        <Contact />
+      </section>
 
       {/* Scroll to Top Button */}
       {showScroll && (
