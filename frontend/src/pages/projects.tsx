@@ -12,25 +12,25 @@ const Projects = () => {
 
         <div className="mt-6 flex flex-wrap justify-center gap-6 w-full">
           <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
-            <h3 className="text-base font-bold">Data Visualizations</h3>
+            <h3 className="text-base font-bold">Data Visualization</h3>
             <p className="mt-1 text-xs">
               Explore insightful data through beautiful visuals.
             </p>
           </div>
           <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
-            <h3 className="text-base font-bold">Data Analytics</h3>
+            <h3 className="text-base font-bold">Data Analytic</h3>
             <p className="mt-1 text-xs">
               Transform data into actionable insights.
             </p>
           </div>
           <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
-            <h3 className="text-base font-bold">Artificial Intelligences</h3>
+            <h3 className="text-base font-bold">Artificial Intelligence</h3>
             <p className="mt-1 text-xs">
               Unlock the power of AI for smarter solutions.
             </p>
           </div>
           <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
-            <h3 className="text-base font-bold">Data Automations</h3>
+            <h3 className="text-base font-bold">Data Automation</h3>
             <p className="mt-1 text-xs">
               Automate workflows to save time and boost efficiency.
             </p>
