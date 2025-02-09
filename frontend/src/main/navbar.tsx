@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
       ></div>
 
       {/* Navbar */}
-      <nav className="bg-[var(--warna1-color)] p-4 shadow-xl rounded-4xl mt-4 mb max-w-3xl mx-auto fixed top-0 left-0 right-0 z-30">
+      <nav className="bg-[var(--warna1-color)] p-4 shadow-xl rounded-4xl mt-4 mb max-w-3xl mx-auto fixed top-0 left-0 right-0 z-[9999]">
         <div className="max-w-7xl mx-auto flex items-center justify-center">
           <ul className="flex space-x-10">
             {/* HOME */}
@@ -120,99 +120,99 @@ const Navbar: React.FC = () => {
               </button>
             </li>
 
-            {/* PROFESSIONAL */}
-            <li className="text-xs text-white relative group">
-              <Link
-                to="/professional"
-                className={`hover:text-white transition-all duration-300 transform ${
-                  activePage === "/professional" ? "text-white" : ""
-                }`}
-              >
-                PROFESSIONAL
-                <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/professional"
-                      ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-0"
-                  }`}
-                ></span>
-              </Link>
-            </li>
-
             {/* EDUCATION */}
             <li className="text-xs text-white relative group">
-              <Link
-                to="/education"
-                className={`hover:text-white transition-all duration-300 transform ${
-                  activePage === "/education" ? "text-white" : ""
+              <button
+                onClick={() => handleSetActive("education")}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "education" ? "text-white" : "text-white"
                 }`}
               >
                 EDUCATION
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/education"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "education"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-0"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </Link>
+              </button>
+            </li>
+
+            {/* PROFESSIONAL */}
+            <li className="text-xs text-white relative group">
+              <button
+                onClick={() => handleSetActive("experience")}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "professional" ? "text-white" : "text-white"
+                }`}
+              >
+                EXPERIENCE
+                <span
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "experience"
+                      ? "w-full left-1/2 -translate-x-1/2"
+                      : "w-0 group-hover:w-full group-hover:left-0"
+                  }`}
+                ></span>
+              </button>
             </li>
 
             {/* PROJECTS */}
             <li className="text-xs text-white relative group">
-              <Link
-                to="/projects"
-                className={`hover:text-white transition-all duration-300 transform ${
-                  activePage === "/projects" ? "text-white" : ""
+              <button
+                onClick={() => handleSetActive("projects")}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "projects" ? "text-white" : "text-white"
                 }`}
               >
                 PROJECTS
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/projects"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "projects"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-0"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </Link>
+              </button>
             </li>
 
             {/* CERTIFICATE */}
             <li className="text-xs text-white relative group">
-              <Link
-                to="/certificate"
-                className={`hover:text-white transition-all duration-300 transform ${
-                  activePage === "/certificate" ? "text-white" : ""
+              <button
+                onClick={() => handleSetActive("certificate")}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "certificate" ? "text-white" : "text-white"
                 }`}
               >
                 CERTIFICATE
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/certificate"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "certificate"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-0"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </Link>
+              </button>
             </li>
 
             {/* CONTACT */}
             <li className="text-xs text-white relative group">
-              <Link
-                to="/contact"
-                className={`hover:text-white transition-all duration-300 transform ${
-                  activePage === "/contact" ? "text-white" : ""
+              <button
+                onClick={() => handleSetActive("contact")}
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
+                  activePage === "contact" ? "text-white" : "text-white"
                 }`}
               >
                 CONTACT
                 <span
-                  className={`absolute left-1/2 bottom-[-4px] w-0 h-[2px] bg-white transform origin-left transition-all duration-300 ${
-                    activePage === "/contact"
+                  className={`absolute left-1/2 bottom-[-4px] h-[2px] bg-white transform transition-all duration-300 ${
+                    activePage === "contact"
                       ? "w-full left-1/2 -translate-x-1/2"
-                      : "group-hover:w-full group-hover:left-0"
+                      : "w-0 group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

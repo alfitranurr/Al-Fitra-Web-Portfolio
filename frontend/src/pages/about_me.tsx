@@ -1,8 +1,7 @@
 // src/pages/about_me.tsx
-
 const AboutMe = () => {
   return (
-    <section id="about-me" className="flex justify-center mt-6 px-4">
+    <section id="about-me" className="flex justify-center mt-6 px-4 pt-[60px]">
       <div className="max-w-6xl w-full p-4 bg-white/20 backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center">
         <h1 className="text-lg font-semibold text-warna3 text-center mb-4">
           About Me
