@@ -5,6 +5,7 @@ import Professional from "../pages/professional";
 import Education from "../pages/education";
 import Experience from "../pages/experience";
 import Projects from "../pages/projects";
+import Certificate from "../pages/certificate";
 import Contact from "../pages/contact";
 import MapCard from "../components/MapCard/mapcard";
 
@@ -152,6 +153,7 @@ const Home: React.FC = () => {
         </motion.div>
       </div>
 
+      {/* SECTION */}
       <section
         id="about-me"
         className="scroll-margin-top-16"
@@ -201,6 +203,16 @@ const Home: React.FC = () => {
         }}
       >
         <Projects />
+      </section>
+
+      <section
+        id="certificate"
+        className="scroll-margin-top-16"
+        style={{
+          position: "relative",
+        }}
+      >
+        <Certificate />
       </section>
 
       <section

@@ -8,6 +8,10 @@ import {
 } from "react-icons/ai";
 import LogoDSCUMM from "../../assets/images/Logo DSC UMM.png";
 import LogoSDGsUMM from "../../assets/images/Logo SDGs UMM.png";
+import LogoJDD from "../../assets/images/Logo JDD.png";
+import LogoBEMFTUMM from "../../assets/images/Logo BEM FT UMM.png";
+import LogoRK from "../../assets/images/Logo Rumah Kepemimpinan.png";
+import LogoHMIF from "../../assets/images/Logo HMIF UMM.png";
 
 const CommitteesOrganizationsCard = () => {
   const [openCards, setOpenCards] = useState<number[]>([]);
@@ -25,10 +29,38 @@ const CommitteesOrganizationsCard = () => {
   const cardsData = [
     {
       id: 1,
+      logo: LogoRK,
+      title: "Awardee of Rumah Kepemimpinan Scholarship XII",
+      organization: "Rumah Kepemimpinan",
+      duration: "Jun 2024 - Present",
+      location: "Malang, East Java, Indonesia",
+      description: [
+        "• Promoting sustainable development goals",
+        "• Organizing outreach programs and events",
+        "• Collaborating with local and global organizations",
+        "• Raising awareness among students about social impact",
+      ],
+    },
+    {
+      id: 2,
+      logo: LogoSDGsUMM,
+      title: "Media and Communications Division",
+      organization: "SDGs Student Center UMM",
+      duration: "Nov 2024 - Present",
+      location: "Malang, East Java, Indonesia",
+      description: [
+        "• Promoting sustainable development goals",
+        "• Organizing outreach programs and events",
+        "• Collaborating with local and global organizations",
+        "• Raising awareness among students about social impact",
+      ],
+    },
+    {
+      id: 3,
       logo: LogoDSCUMM,
       title: "Research Division",
       organization: "Data Science Club UMM",
-      duration: "2023 - Present",
+      duration: "May 2024 - Present",
       location: "Malang, East Java, Indonesia",
       description: [
         "• Organizing data science events and workshops",
@@ -38,11 +70,11 @@ const CommitteesOrganizationsCard = () => {
       ],
     },
     {
-      id: 2,
-      logo: LogoSDGsUMM,
-      title: "Media and Communications Division",
-      organization: "SDGs Student Center UMM",
-      duration: "2021 - 2023",
+      id: 4,
+      logo: LogoJDD,
+      title: "Liaison Officer",
+      organization: "Jatim Developer Day",
+      duration: "Nov 2024 - Nov 2024",
       location: "Malang, East Java, Indonesia",
       description: [
         "• Promoting sustainable development goals",
@@ -51,10 +83,39 @@ const CommitteesOrganizationsCard = () => {
         "• Raising awareness among students about social impact",
       ],
     },
+    {
+      id: 6,
+      logo: LogoHMIF,
+      title: "Public Relations of Dies Natalies Informatika UMM 2024",
+      organization: "Himpunan Mahasiswa Informatika UMM (HMIF)",
+      duration: "Apr 2024 - Jun 2024",
+      location: "Malang, East Java, Indonesia",
+      description: [
+        "• Promoting sustainable development goals",
+        "• Organizing outreach programs and events",
+        "• Collaborating with local and global organizations",
+        "• Raising awareness among students about social impact",
+      ],
+    },
+    {
+      id: 7,
+      logo: LogoBEMFTUMM,
+      title: "Liaison Officer of PESMABA 2023",
+      organization: "BEM FT UMM",
+      duration: "Aug 2023 - Aug 2023",
+      location: "Malang, East Java, Indonesia",
+      description: [
+        "• Promoting sustainable development goals",
+        "• Organizing outreach programs and events",
+        "• Collaborating with local and global organizations",
+        "• Raising awareness among students about social impact",
+      ],
+    },
+    // Add more cards if needed
   ];
 
   const totalCards = cardsData.length;
-  const cardsPerPage = 2;
+  const cardsPerPage = 3; // Change this value to 3 for 3 cards per page
 
   const scrollUp = () => {
     setVisibleStartIndex((prev) => Math.max(prev - 1, 0));
@@ -89,9 +150,10 @@ const CommitteesOrganizationsCard = () => {
                     {card.title}
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    {card.organization} • {card.duration}
+                    {card.organization} • {card.location}
                   </p>
-                  <p className="text-gray-300 text-sm">{card.location}</p>
+                  {/* Added space-y-1 for spacing between Organization/Location and Duration */}
+                  <p className="text-gray-300 text-sm mt-2">{card.duration}</p>
                 </div>
               </div>
               <RiseDown isOpen={openCards.includes(card.id)}>
@@ -106,7 +168,7 @@ const CommitteesOrganizationsCard = () => {
             </div>
           ))}
       </div>
-
+  
       {/* Scroll Buttons at the Bottom */}
       <div className="flex justify-center items-center space-x-6 mt-4">
         <div className="text-center">
@@ -146,7 +208,7 @@ const CommitteesOrganizationsCard = () => {
           <p className="text-white text-xs mt-2">Scroll Down</p>
         </div>
       </div>
-
+  
       {/* More Button at Bottom Right */}
       <div className="absolute bottom-4 right-1">
         <button className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer">
@@ -154,8 +216,9 @@ const CommitteesOrganizationsCard = () => {
           <AiOutlineRight size={16} />
         </button>
       </div>
-    </div>
-  );
-};
+      </div>
+    );
+  };
+  
+  export default CommitteesOrganizationsCard;
 
-export default CommitteesOrganizationsCard;

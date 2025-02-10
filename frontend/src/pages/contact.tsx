@@ -137,10 +137,10 @@ const Contact: React.FC = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="bg-var(--warna2-color) text-white p-3 rounded-md w-full transition duration-200 text-sm"
+                  className="bg-var(--warna1-color) text-white p-3 rounded-md w-full transition duration-200 text-sm"
                   style={{
-                    backgroundColor: "var(--warna2-color)",
-                    borderColor: "var(--warna2-color)",
+                    backgroundColor: "var(--warna1-color)",
+                    borderColor: "var(--warna1-color)",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = "white";
@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor =
-                      "var(--warna2-color)";
+                      "var(--warna1-color)";
                     e.currentTarget.style.color = "white";
                   }}
                 >
