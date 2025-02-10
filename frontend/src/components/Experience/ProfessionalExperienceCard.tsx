@@ -60,7 +60,7 @@ const ProfessionalExperienceCard = () => {
       logo: LogoINDEF,
       title: "Enumerator",
       company: "Institute for Development of Economics and Finance (INDEF)",
-      duration: "Aug 2023 - Sep 2024",
+      duration: "Aug 2024 - Sep 2024",
       location: "Malang, East Java, Indonesia",
       description: [
         "• Leading multiple project teams",
@@ -139,7 +139,7 @@ const ProfessionalExperienceCard = () => {
             </div>
           ))}
       </div>
-  
+
       {/* Scroll Buttons at the Bottom */}
       <div className="flex justify-center items-center space-x-6 mt-4">
         <div className="text-center">
@@ -179,7 +179,7 @@ const ProfessionalExperienceCard = () => {
           <p className="text-white text-xs mt-2">Scroll Down</p>
         </div>
       </div>
-  
+
       {/* More Button at Bottom Right */}
       <div className="absolute bottom-4 right-1">
         <button className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer">

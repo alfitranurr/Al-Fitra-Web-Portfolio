@@ -71,7 +71,7 @@ const EducationCard = () => {
               <p className="text-gray-200 text-xs">
                 {education.duration} • {education.location}
               </p>
-              <p className="text-gray-200 text-xs">GPA: {education.gpa}</p>
+              <p className="text-gray-200 text-xs mt-2">GPA: {education.gpa}</p>
             </div>
           </div>
         </div>
