@@ -8,8 +8,8 @@ import {
 } from "react-icons/ai";
 import LogoAzkaGroup from "../../assets/images/Logo Azka Group.png";
 import LogoMetadari from "../../assets/images/Logo Metadari.png";
-import LogoThirdCompany from "../../assets/images/Logo.png";
-import LogoFourthCompany from "../../assets/images/Logo.png";
+import LogoINDEF from "../../assets/images/Logo INDEF.png";
+import LogoMySkill from "../../assets/images/Logo MySkill.png";
 
 const ProfessionalExperienceCard = () => {
   const [openCards, setOpenCards] = useState<number[]>([]);
@@ -57,11 +57,11 @@ const ProfessionalExperienceCard = () => {
     },
     {
       id: 3,
-      logo: LogoThirdCompany,
-      title: "Project Manager",
-      company: "Third Company Name",
-      duration: "Mar 2023 - Nov 2024",
-      location: "Jakarta, Indonesia",
+      logo: LogoINDEF,
+      title: "Enumerator",
+      company: "Institute for Development of Economics and Finance (INDEF)",
+      duration: "Aug 2023 - Sep 2024",
+      location: "Malang, East Java, Indonesia",
       description: [
         "• Leading multiple project teams",
         "• Managing project timelines and deliverables",
@@ -71,11 +71,11 @@ const ProfessionalExperienceCard = () => {
     },
     {
       id: 4,
-      logo: LogoFourthCompany,
-      title: "Software Engineer",
-      company: "Fourth Company Name",
-      duration: "Jul 2022 - Feb 2023",
-      location: "Surabaya, East Java, Indonesia",
+      logo: LogoMySkill,
+      title: "Data Analysis : Fullstack Intensive Bootcamp",
+      company: "MySkill",
+      duration: "May 2024 - July 2024",
+      location: "Work From Home (WFH)",
       description: [
         "• Developing and deploying scalable software solutions",
         "• Writing clean and efficient code",
@@ -121,9 +121,10 @@ const ProfessionalExperienceCard = () => {
                     {card.title}
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    {card.company} • {card.duration}
+                    {card.company} • {card.location}
                   </p>
-                  <p className="text-gray-300 text-sm">{card.location}</p>
+                  {/* Added margin-top to give space between company/location and duration */}
+                  <p className="text-gray-300 text-sm mt-2">{card.duration}</p>
                 </div>
               </div>
               <RiseDown isOpen={openCards.includes(card.id)}>
@@ -138,7 +139,7 @@ const ProfessionalExperienceCard = () => {
             </div>
           ))}
       </div>
-
+  
       {/* Scroll Buttons at the Bottom */}
       <div className="flex justify-center items-center space-x-6 mt-4">
         <div className="text-center">
@@ -178,7 +179,7 @@ const ProfessionalExperienceCard = () => {
           <p className="text-white text-xs mt-2">Scroll Down</p>
         </div>
       </div>
-
+  
       {/* More Button at Bottom Right */}
       <div className="absolute bottom-4 right-1">
         <button className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer">

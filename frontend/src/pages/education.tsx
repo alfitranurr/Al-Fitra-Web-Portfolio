@@ -1,6 +1,8 @@
 // Import images
 import LogoUMM from "../assets/images/Logo UMM Color.png";
 import LogoIsyKarima from "../assets/images/Logo Isy Karima.png";
+import LogoAlMuqoddasah from "../assets/images/Logo Al Muqoddasah.png";
+import LogoSDMuhammadiyah from "../assets/images/Logo SD Muhammadiyah Ponorogo.png";
 
 const educationData = [
   {
@@ -21,13 +23,31 @@ const educationData = [
     location: "Karanganyar, Central Java, Indonesia",
     gpa: "4.00/4.00",
   },
+  {
+    id: 3,
+    logo: LogoAlMuqoddasah,
+    title: "Junior High School • Natural Sciences",
+    institution: "Al Muqoddasah Islamic Boarding School",
+    duration: "2015 - 2018",
+    location: "Ponorogo, East Java, Indonesia",
+    gpa: "4.00/4.00",
+  },
+  {
+    id: 4,
+    logo: LogoSDMuhammadiyah,
+    title: "Primary school • Natural Sciences",
+    institution: "SD Muhammadiyah 1 Ponorogo",
+    duration: "2008 - 2014",
+    location: "Ponorogo, East Java, Indonesia",
+    gpa: "9.00/10",
+  },
 ];
 
 const EducationCard = () => {
   return (
     <section
       id="education"
-      className="w-full p-4 bg-white/20 backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center mt-20 space-y-4"
+      className="w-full p-5 bg-white/20 backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center mt-20 space-y-2"
     >
       <h2 className="text-lg font-semibold text-white mb-6 w-full text-center">
         EDUCATION
