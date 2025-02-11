@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Projects = () => {
   return (
     <section id="projects" className="flex justify-center mt-6 px-4 pt-[60px]">
@@ -11,12 +13,15 @@ const Projects = () => {
         </p>
 
         <div className="mt-6 flex flex-wrap justify-center gap-6 w-full">
-          <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
+          <Link
+            to="/components/Projects/Data/DataVisualization/datavisualization"
+            className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]"
+          >
             <h3 className="text-base font-bold">Data Visualization</h3>
             <p className="mt-1 text-xs">
               Explore insightful data through beautiful visuals.
             </p>
-          </div>
+          </Link>
           <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
             <h3 className="text-base font-bold">Data Analytic</h3>
             <p className="mt-1 text-xs">

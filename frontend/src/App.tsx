@@ -6,6 +6,7 @@ import NavbarMobile from "./mobile/navbar_mobile";
 import FooterMobile from "./mobile/footer_mobile";
 import Home from "./pages/home";
 import AlertInitially from "./components/Alerts/alertInitially";
+import DataVisualization from "./components/Projects/Data/DataVisualization/datavisualization";
 
 const App: React.FC = () => {
   const [showAlert, setShowAlert] = useState(true);
@@ -33,10 +34,15 @@ const App: React.FC = () => {
         {/* Routes for the main content */}
         <div className="flex-grow relative">
           {/* Show the alert initially */}
-          {showAlert && <AlertInitially />}{" "}
+          {showAlert && <AlertInitially />}
           <Routes>
             {/* Define routes for main pages here */}
             <Route path="/" element={<Home />} />
+            {/* Define the route for Data Visualization page */}
+            <Route
+              path="/components/Projects/Data/DataVisualization/datavisualization"
+              element={<DataVisualization />}
+            />
           </Routes>
         </div>
 
