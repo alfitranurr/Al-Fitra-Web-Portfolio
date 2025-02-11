@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import AboutMe from "../pages/about_me";
-import Professional from "../pages/professional";
+import Professional from "../components/TechStacks/techstacks";
 import Education from "../pages/education";
 import Experience from "../pages/experience";
 import Projects from "../pages/projects";
