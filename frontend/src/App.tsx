@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./main/navbar";
 import Footer from "./main/footer";
 import NavbarMobile from "./mobile/navbar_mobile";
 import FooterMobile from "./mobile/footer_mobile";
 import Home from "./pages/home";
-// import ABOUTME from "./pages/about_me";
-// import Professional from "./pages/professional";
+import AlertInitially from "./components/Alerts/alertInitially";
 
 const App: React.FC = () => {
+  const [showAlert, setShowAlert] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowAlert(false);
+    }, 10000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
-      {/* Set up the flex container for the entire page */}
       <div className="flex flex-col min-h-screen">
-        {/* Navbar for large screens */}
+        {/* Navbar for Dekstop Screens */}
         <div className="hidden lg:block">
           <Navbar />
         </div>
@@ -24,18 +31,16 @@ const App: React.FC = () => {
         </div>
 
         {/* Routes for the main content */}
-        <div className="flex-grow">
+        <div className="flex-grow relative">
+          {/* Show the alert initially */}
+          {showAlert && <AlertInitially />}{" "}
           <Routes>
             {/* Define routes for main pages here */}
             <Route path="/" element={<Home />} />
-            {/* <Route path="/about_me" element={<ABOUTME />} /> */}
-            {/* <Route path="/professional" element={<Professional />} /> */}
-            {/* <Route path="/contact" element={<div></div>} /> */}
-            {/* Add other routes for additional pages */}
           </Routes>
         </div>
 
-        {/* Footer at the bottom */}
+        {/* Footer for Dekstop Screens */}
         <div className="hidden lg:block">
           <Footer />
         </div>

@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
       ></div>
 
       {/* Navbar */}
-      <nav className="bg-[var(--warna1-color)] p-4 shadow-xl rounded-4xl mt-4 mb max-w-3xl mx-auto fixed top-0 left-0 right-0 z-[9999]">
+      <nav className="bg-[var(--warna1-color)] p-4 shadow-xl rounded-4xl mt-4 mb max-w-3xl mx-auto fixed top-0 left-0 right-0 z-[1]">
         <div className="max-w-7xl mx-auto flex items-center justify-center">
           <ul className="flex space-x-10">
             {/* HOME */}
