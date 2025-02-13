@@ -98,7 +98,7 @@ const ProfessionalExperienceCard = () => {
               style={{ backgroundColor: "var(--bas-color)" }}
               onClick={() => toggleCard(card.id)}
             >
-              <div className="flex items-center space-x-4 mb-4">
+              <div className="flex items-center space-x-4 mb-2">
                 <img
                   src={card.logo}
                   alt="Professional Experience Logo"

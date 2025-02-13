@@ -8,7 +8,7 @@ const educationData = [
   {
     id: 1,
     logo: LogoUMM,
-    title: "Bachelor's degree • Informatics Engineering, S.Kom",
+    title: "Bachelor's degree • Informatics Engineering • S.Kom",
     institution: "University of Muhammadiyah Malang",
     duration: "2022 - Present",
     location: "Malang, East Java, Indonesia",
@@ -57,7 +57,7 @@ const EducationCard = () => {
           key={education.id}
           className="bg-[var(--bas-color)] p-6 rounded-2xl shadow-lg w-full max-w-4xl mx-auto transform transition-all duration-300 hover:scale-95 hover:shadow-2xl cursor-pointer"
         >
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 mb-2">
             <img
               src={education.logo}
               alt="Institution Logo"
