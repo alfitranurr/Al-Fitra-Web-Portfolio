@@ -1,3 +1,5 @@
+// src/App.tsx
+
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./main/navbar";
@@ -38,19 +40,19 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        {/* Navbar for Desktop Screens */}
+        {/* NAVBAR FOR DEKSTOP SCREENS */}
         <div className="hidden lg:block">
           <Navbar />
         </div>
 
-        {/* Navbar for mobile screens */}
+        {/* NAVBAR FOR MOBILE SCREENS */}
         <div className="lg:hidden">
           <NavbarMobile />
         </div>
 
-        {/* Routes for the main content */}
+        {/* ROUTES FOR THE MAIN CONTENT */}
         <div className="flex-grow relative">
-          {/* Show the alert initially */}
+          {/* SHOW THE ALERT INITIALLY */}
           {showAlert && <AlertInitially />}
           <Routes>
             {/* MAIN PAGE */}
@@ -106,12 +108,12 @@ const App: React.FC = () => {
           </Routes>
         </div>
 
-        {/* Footer for Desktop Screens */}
+        {/* FOOTER FOR DEKSTOP SCREENS */}
         <div className="hidden lg:block">
           <Footer />
         </div>
 
-        {/* Footer for mobile screens */}
+        {/* FOOTER FOR MOBILE SCREENS */}
         <div className="lg:hidden">
           <FooterMobile />
         </div>
