@@ -28,7 +28,7 @@ const ProfessionalExperienceCard = () => {
     {
       id: 1,
       logo: LogoAzkaGroup,
-      title: "Web Development • Business Development • Graphic Design",
+      title: "Web Development • Data Automation • Graphic Design",
       company: "CV. Indo Azka Konsultan",
       duration: "Jan 2025 - Mar 2025",
       location: "Malang, East Java, Indonesia",
