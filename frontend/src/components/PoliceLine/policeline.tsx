@@ -10,7 +10,7 @@ interface PoliceLineProps {
 const PoliceLine: React.FC<PoliceLineProps> = ({ items, isLoaded }) => {
   return (
     <>
-      {/* Kotak Putih */}
+      {/* WHITE BOX */}
       <div
         className="w-full h-8 bg-white mt-4 mb-[-35px] overflow-hidden flex items-center justify-center shadow-lg"
         style={{
@@ -41,7 +41,7 @@ const PoliceLine: React.FC<PoliceLineProps> = ({ items, isLoaded }) => {
         </motion.div>
       </div>
 
-      {/* Kotak Ungu */}
+      {/* PURPLE BOX */}
       <div
         className="w-full h-8 bg-[var(--warna2-color)] mt-0 mb-[-35px] overflow-hidden flex items-center justify-center px-0 shadow-lg"
         style={{
