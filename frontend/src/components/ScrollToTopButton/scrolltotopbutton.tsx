@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUp } from "lucide-react";
+import { ChevronUp } from "lucide-react"; // Changed to ChevronUp icon
 
 interface ScrollToTopButtonProps {
   showScroll: boolean;
@@ -20,7 +20,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({
         aria-label="Scroll to Top"
         style={{ zIndex: 9999 }}
       >
-        <ArrowUp size={15} />
+        <ChevronUp size={15} /> {/* Changed icon here */}
       </button>
     )
   );
