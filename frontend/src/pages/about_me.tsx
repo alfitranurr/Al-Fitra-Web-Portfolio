@@ -19,6 +19,8 @@ const AboutMe = () => {
           to innovative projects and advancing in the realm of data-related
           technologies.
         </p>
+
+        {/* AL FITRA NUR RAMADHANI'S RESUME */}
         <div className="mt-6 mb-2 flex justify-center">
           <a
             href="https://drive.google.com/file/d/1V4Y25IxtnVF95nSm0oc-fJ28I9UZIxsP/view?usp=sharing"
