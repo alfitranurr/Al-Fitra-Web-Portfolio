@@ -68,7 +68,7 @@ const ProfessionalExperienceCard = () => {
       duration: "May 2024 - July 2024",
       location: "Work From Home (WFH)",
       description: [
-        "• Completed a 30-day Fullstack Data Analyst Bootcamp with Distinction (92/100), covering SQL, Python analysis, and dashboard creation presented to stakeholders.",
+        "• Completed a 30-day Fullstack Data Analyst Bootcamp with Distinction score (92/100), covering SQL, Python analysis, and dashboard creation presented to stakeholders.",
       ],
     },
   ];
