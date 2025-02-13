@@ -9,7 +9,7 @@ import TopSection from "../components/TopSection/topsection";
 import PoliceLine from "../components/PoliceLine/policeline";
 import TechStacks from "../components/TechStacks/techstacks";
 import MapCard from "../components/MapCard/mapcard";
-import ScrollToTopButton from "../components/ScrollToTopButton/scrolltotopbutton"; // Import the ScrollToTopButton component
+import ScrollToTopButton from "../components/ScrollToTopButton/scrolltotopbutton";
 
 const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
