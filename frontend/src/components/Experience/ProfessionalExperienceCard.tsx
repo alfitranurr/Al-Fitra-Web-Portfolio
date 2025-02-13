@@ -33,10 +33,8 @@ const ProfessionalExperienceCard = () => {
       duration: "Jan 2025 - Mar 2025",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Developing and maintaining web applications",
-        "• Working with frontend and backend technologies",
-        "• Collaborating with cross-functional teams",
-        "• Ensuring the performance and scalability of applications",
+        "• Created automated financial reporting for the company's 6 branches using Macro VBA in Excel, resulting in a 90% increase in work efficiency",
+        "• Developed a frontend e-commerce website for Depo79 using React Framework, enabling all sales to be conducted directly on the platform.",
       ],
     },
     {
@@ -47,12 +45,8 @@ const ProfessionalExperienceCard = () => {
       duration: "Dec 2024 - Now",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Analyzing large datasets",
-        "• Creating reports to support business decisions",
-        "• Building data models",
-        "• Automating data pipelines using Python and SQL",
-        "• Collaborating with business teams to optimize data strategies",
-        "• Using Tableau for data visualization and presentation",
+        "• Analyzed metaverse data and tracked virtual reality development, contributing to a 30% increase in metaverse engagement both within UMM and externally",
+        "• Creating reports to support business decisions Created an operational team attendance system in Looker Studio, improving tracking efficiency and boosting team productivity by 50%.",
       ],
     },
     {
@@ -63,10 +57,7 @@ const ProfessionalExperienceCard = () => {
       duration: "Aug 2024 - Sep 2024",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Leading multiple project teams",
-        "• Managing project timelines and deliverables",
-        "• Collaborating with stakeholders",
-        "• Ensuring projects are delivered on time and within budget",
+        "• Represented INDEF for the Malang region, conducted surveys with GOJEK, engaged 10 drivers, 3 restaurants, and 1 school, delivering valid data for the analysis of President Prabowo’s program and the MBG (Makan Bergizi Gratis) initiative",
       ],
     },
     {
@@ -77,10 +68,7 @@ const ProfessionalExperienceCard = () => {
       duration: "May 2024 - July 2024",
       location: "Work From Home (WFH)",
       description: [
-        "• Developing and deploying scalable software solutions",
-        "• Writing clean and efficient code",
-        "• Performing code reviews and debugging",
-        "• Collaborating with the product team to design features",
+        "• Completed a 30-day Fullstack Data Analyst Bootcamp with Distinction (92/100), covering SQL, Python analysis, and dashboard creation presented to stakeholders.",
       ],
     },
   ];
@@ -114,7 +102,7 @@ const ProfessionalExperienceCard = () => {
                 <img
                   src={card.logo}
                   alt="Professional Experience Logo"
-                  className="w-16 h-16"
+                  className="w-12 h-12"
                 />
                 <div>
                   <h3 className="text-white text-md font-semibold">
