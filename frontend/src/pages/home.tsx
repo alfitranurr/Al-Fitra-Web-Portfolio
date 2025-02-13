@@ -1,4 +1,3 @@
-// src/pages/home.tsx
 import React, { useState, useEffect } from "react";
 import AboutMe from "../pages/about_me";
 import Education from "../pages/education";
@@ -10,8 +9,7 @@ import TopSection from "../components/TopSection/topsection";
 import PoliceLine from "../components/PoliceLine/policeline";
 import TechStacks from "../components/TechStacks/techstacks";
 import MapCard from "../components/MapCard/mapcard";
-
-import { ArrowUp } from "lucide-react";
+import ScrollToTopButton from "../components/ScrollToTopButton/scrolltotopbutton"; // Import the ScrollToTopButton component
 
 const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -38,10 +36,6 @@ const Home: React.FC = () => {
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const name = "Al Fitra Nur Ramadhani";
 
   const items = [
@@ -56,10 +50,8 @@ const Home: React.FC = () => {
     <div className="flex flex-col justify-center items-center min-h-screen relative">
       {/* ==================== TOP SECTION ====================*/}
       <TopSection name={name} />
-
       {/* ==================== POLICE LINE ==================== */}
       <PoliceLine items={items} isLoaded={isLoaded} />
-
       {/* ==================== SECTION ==================== */}
       {/* ABOUT ME */}
       <section
@@ -71,13 +63,10 @@ const Home: React.FC = () => {
       >
         <AboutMe />
       </section>
-
       {/* TECH STACKS */}
       <TechStacks />
-
       {/* MAP CARD */}
       <MapCard />
-
       {/* WRAP EDUCATION & EXPERIENCE IN A FLEX CONTAINER */}
       <div
         className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 mt-8"
@@ -107,7 +96,6 @@ const Home: React.FC = () => {
           <Experience />
         </section>
       </div>
-
       {/* PROJECTS */}
       <section
         id="projects"
@@ -118,7 +106,6 @@ const Home: React.FC = () => {
       >
         <Projects />
       </section>
-
       {/* CERTIFICATE */}
       <section
         id="certificate"
@@ -129,7 +116,6 @@ const Home: React.FC = () => {
       >
         <Certificate />
       </section>
-
       {/* CONTACT */}
       <section
         id="contact"
@@ -140,18 +126,8 @@ const Home: React.FC = () => {
       >
         <Contact />
       </section>
-
       {/* ==================== SCROLL TO TOP BUTTON ==================== */}
-      {showScroll && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-all hover:cursor-pointer"
-          aria-label="Scroll to Top"
-          style={{ zIndex: 9999 }}
-        >
-          <ArrowUp size={15} />
-        </button>
-      )}
+      <ScrollToTopButton showScroll={showScroll} />{" "}
     </div>
   );
 };
