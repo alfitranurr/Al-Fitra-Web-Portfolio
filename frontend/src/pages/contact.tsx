@@ -1,3 +1,5 @@
+// src/pages/contact.tsx
+
 import React from "react";
 import { FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -9,7 +11,7 @@ const Contact: React.FC = () => {
         style={{ backgroundColor: "var(--base-color)" }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-6 w-full">
-          {/* Left section (contact info) */}
+          {/* ==================== LEFT SECTION (CONTACT INFO) ==================== */}
           <div className="space-y-6 text-white flex flex-col justify-start">
             <h2 className="text-lg font-bold text-left">Get In Touch</h2>
             <p className="text-sm text-left">
@@ -19,7 +21,7 @@ const Contact: React.FC = () => {
               hearing from you!
             </p>
 
-            {/* Social Media Links */}
+            {/* SOCIAL MEDIA LINKS */}
             <div className="flex space-x-6 text-white">
               <a
                 href="https://www.instagram.com/rmdhani_ii/"
@@ -94,7 +96,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* Right section (contact form) */}
+          {/* ==================== RIGHT SECTION (CONTACT FORM) ==================== */}
           <div className="space-y-4">
             <div className="p-6 bg-white/20 backdrop-blur-none lg:backdrop-blur-md rounded-lg shadow-md">
               <form className="space-y-4">

@@ -1,4 +1,4 @@
-// src/Home.tsx
+// src/pages/home.tsx
 import React, { useState, useEffect } from "react";
 import AboutMe from "../pages/about_me";
 import Education from "../pages/education";

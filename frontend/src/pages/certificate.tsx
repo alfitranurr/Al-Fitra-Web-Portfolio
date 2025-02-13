@@ -1,3 +1,5 @@
+// src/pages/certificate.tsx
+
 import { Link } from "react-router-dom";
 
 const Certificate = () => {

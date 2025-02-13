@@ -1,3 +1,5 @@
+// src/pages/projects.tsx
+
 import { Link } from "react-router-dom";
 
 const Projects = () => {
