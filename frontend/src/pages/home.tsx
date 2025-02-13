@@ -1,16 +1,17 @@
+// src/Home.tsx
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import AboutMe from "../pages/about_me";
-import Professional from "../components/TechStacks/techstacks";
 import Education from "../pages/education";
 import Experience from "../pages/experience";
 import Projects from "../pages/projects";
 import Certificate from "../pages/certificate";
 import Contact from "../pages/contact";
+import TopSection from "../components/TopSection/topsection";
+import PoliceLine from "../components/PoliceLine/policeline";
+import TechStacks from "../components/TechStacks/techstacks";
 import MapCard from "../components/MapCard/mapcard";
 
 import { ArrowUp } from "lucide-react";
-import { Circle } from "lucide-react"; // Import dot icon from lucide-react
 
 const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -43,117 +44,24 @@ const Home: React.FC = () => {
 
   const name = "Al Fitra Nur Ramadhani";
 
-  // Array for looping items
   const items = [
     "Web Portfolio",
     "Data Analyst",
     "Data Engineering",
+    "Data Scientist",
     "Digital Marketing Enthusiast",
   ];
 
   return (
-    <div
-      className="flex flex-col justify-center items-center min-h-screen relative"
-      // style={{ backgroundColor: "var(--base-color)" }}
-    >
-      <div className="text-center text-white mt-45">
-        <h1 className="text-2xl font-light">
-          Hello, I<span style={{ color: "var(--warna3-color)" }}>'</span>m
-        </h1>
+    <div className="flex flex-col justify-center items-center min-h-screen relative">
+      {/* ==================== TOP SECTION ====================*/}
+      <TopSection name={name} />
 
-        <h2 className="text-2xl font-semibold mt-2">
-          {name.split(" ").map((word, wordIndex) => (
-            <span key={wordIndex} className="inline-block mr-2">
-              {word.split("").map((letter, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block"
-                  whileHover={{
-                    y: -10,
-                    transition: { type: "spring", stiffness: 300, damping: 20 },
-                  }}
-                  style={{ color: "white" }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </span>
-          ))}
-        </h2>
+      {/* ==================== POLICE LINE ==================== */}
+      <PoliceLine items={items} isLoaded={isLoaded} />
 
-        <div
-          className="border-t border-white w-full my-4 mx-auto"
-          style={{ maxWidth: "85%" }}
-        ></div>
-
-        <p className="text-lg font-light mt-4 mb-70">
-          Data Enthusiast | Digital Marketing Enthusiast
-        </p>
-      </div>
-
-      {/* Kotak Putih */}
-      <div
-        className="w-full h-8 bg-white mt-4 mb-[-35px] overflow-hidden flex items-center justify-center shadow-lg"
-        style={{
-          transform: "rotate(0deg) translateY(15px) translateX(-2px)", // Rotate the box by 45 degrees
-          transformOrigin: "center", // Ensure the rotation is centered
-        }}
-      >
-        <motion.div
-          className="flex items-center justify-start space-x-50 text-xs sm:text-sm md:text-sm font-semibold text-gray-800 text-center whitespace-nowrap"
-          animate={isLoaded ? { x: ["30%", "-30%"] } : {}} // Trigger animation only after loading
-          transition={{
-            repeat: Infinity, // Repeat the animation forever
-            repeatType: "loop", // Loop the animation
-            duration: 130, // Duration of one loop (faster speed for continuous movement)
-            ease: "linear", // Smooth, continuous movement
-          }}
-        >
-          {/* Duplicated items using array for continuous scroll */}
-          {Array.from({ length: 30 }).map((_, index) => (
-            <span
-              key={index}
-              className="flex items-center text-xs sm:text-sm md:text-sm whitespace-nowrap"
-            >
-              <Circle size={10} className="mr-2" />{" "}
-              {items[index % items.length]}
-            </span>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Kotak Ungu */}
-      <div
-        className="w-full h-8 bg-[var(--warna2-color)] mt-0 mb-[-35px] overflow-hidden flex items-center justify-center px-0 shadow-lg"
-        style={{
-          transform: "rotate(0deg) translateY(-20px) translateX(-2px)", // Adjust translateX to move the box further left
-          transformOrigin: "center",
-        }}
-      >
-        <motion.div
-          className="flex items-center justify-start space-x-50 text-xs sm:text-sm md:text-sm font-semibold text-white text-center whitespace-nowrap"
-          animate={isLoaded ? { x: ["-30%", "30%"] } : {}} // Start from right and move left
-          transition={{
-            repeat: Infinity, // Repeat the animation forever
-            repeatType: "loop", // Loop the animation
-            duration: 130, // Duration of one loop (faster speed for continuous movement)
-            ease: "linear", // Smooth, continuous movement
-          }}
-        >
-          {/* Duplicated items using array for continuous scroll */}
-          {Array.from({ length: 30 }).map((_, index) => (
-            <span
-              key={index}
-              className="flex items-center text-xs sm:text-sm md:text-sm whitespace-nowrap"
-            >
-              <Circle size={10} className="mr-2" />{" "}
-              {items[index % items.length]}
-            </span>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* SECTION */}
+      {/* ==================== SECTION ==================== */}
+      {/* ABOUT ME */}
       <section
         id="about-me"
         className="scroll-margin-top-16"
@@ -164,37 +72,43 @@ const Home: React.FC = () => {
         <AboutMe />
       </section>
 
-      <Professional />
+      {/* TECH STACKS */}
+      <TechStacks />
+
+      {/* MAP CARD */}
       <MapCard />
 
-      {/* Wrap Education and Experience in a flex container */}
+      {/* WRAP EDUCATION & EXPERIENCE IN A FLEX CONTAINER */}
       <div
         className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 mt-8"
         style={{ maxWidth: "1130px", width: "90%", margin: "0 auto" }}
       >
+        {/* EDUCATION */}
         <section
           id="education"
           className="scroll-margin-top-16"
           style={{
             position: "relative",
-            flex: 1, // Ensures it takes available space
+            flex: 1,
           }}
         >
           <Education />
         </section>
 
+        {/* EXPERIENCE */}
         <section
           id="experience"
           className="scroll-margin-top-16"
           style={{
             position: "relative",
-            flex: 1, // Ensures it takes available space
+            flex: 1,
           }}
         >
           <Experience />
         </section>
       </div>
 
+      {/* PROJECTS */}
       <section
         id="projects"
         className="scroll-margin-top-16"
@@ -205,6 +119,7 @@ const Home: React.FC = () => {
         <Projects />
       </section>
 
+      {/* CERTIFICATE */}
       <section
         id="certificate"
         className="scroll-margin-top-16"
@@ -215,6 +130,7 @@ const Home: React.FC = () => {
         <Certificate />
       </section>
 
+      {/* CONTACT */}
       <section
         id="contact"
         className="scroll-margin-top-16"
@@ -225,7 +141,7 @@ const Home: React.FC = () => {
         <Contact />
       </section>
 
-      {/* Scroll to Top Button */}
+      {/* ==================== SCROLL TO TOP BUTTON ==================== */}
       {showScroll && (
         <button
           onClick={scrollToTop}
