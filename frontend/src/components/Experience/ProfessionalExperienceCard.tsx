@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import RiseDown from "./RiseDown"; // Ensure RiseDown supports dynamic height
+import RiseDown from "./RiseDown";
 import {
   AiOutlineUp,
   AiOutlineDown,
@@ -128,7 +128,7 @@ const ProfessionalExperienceCard = () => {
           ))}
       </div>
 
-      {/* Scroll Buttons at the Bottom */}
+      {/* SCROLL UP & DOWN BUTTONS AT THE BOTTOM */}
       <div className="flex justify-center items-center space-x-6 mt-4">
         <div className="text-center">
           <button
@@ -168,7 +168,7 @@ const ProfessionalExperienceCard = () => {
         </div>
       </div>
 
-      {/* More Button at Bottom Right */}
+      {/* MORE BUTTON AT BOTTOM RIGHT */}
       <div className="absolute bottom-4 right-1">
         <button className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer">
           <p className="text-xs">More</p>

@@ -14,6 +14,7 @@ const Projects = () => {
           new and interesting things. Stay tuned!
         </p>
 
+        {/* ====================================== PROJECT DATA ====================================== */}
         <div className="mt-6 flex flex-wrap justify-center gap-6 w-full">
           <Link
             to="/components/Projects/Data/DataVisualization/datavisualization"
@@ -56,7 +57,7 @@ const Projects = () => {
           </Link>
         </div>
 
-        {/* ====================================== SECTION ======================================  2 */}
+        {/* ====================================== BEYOND DATA ====================================== */}
 
         <h1 className="text-lg font-semibold text-white text-center mt-12 mb-4">
           OTHER PROJECTS BEYOND DATA
