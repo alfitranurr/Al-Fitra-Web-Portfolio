@@ -13,75 +13,81 @@ import {
 import { motion } from "framer-motion";
 
 const techStacks = [
-  { name: "Python", icon: <FaPython className="text-blue-500 text-3xl" /> },
+  { name: "Python", icon: <FaPython className="text-blue-500 text-xl" /> },
   {
     name: "Looker Studio",
-    icon: <SiGoogleanalytics className="text-red-500 text-3xl" />,
+    icon: <SiGoogleanalytics className="text-red-500 text-xl" />,
   },
-  { name: "DBeaver", icon: <SiDbeaver className="text-blue-400 text-3xl" /> },
+  { name: "DBeaver", icon: <SiDbeaver className="text-blue-400 text-xl" /> },
   {
     name: "PostgreSQL",
-    icon: <SiPostgresql className="text-blue-500 text-3xl" />,
+    icon: <SiPostgresql className="text-blue-500 text-xl" />,
   },
   {
     name: "Google Colab",
-    icon: <SiGooglecolab className="text-orange-400 text-3xl" />,
+    icon: <SiGooglecolab className="text-orange-400 text-xl" />,
   },
-  { name: "React", icon: <FaReact className="text-blue-400 text-3xl" /> },
+  { name: "React", icon: <FaReact className="text-blue-400 text-xl" /> },
   {
     name: "Tailwind",
-    icon: <SiTailwindcss className="text-cyan-400 text-3xl" />,
+    icon: <SiTailwindcss className="text-cyan-400 text-xl" />,
   },
   {
     name: "TypeScript",
-    icon: <SiTypescript className="text-blue-500 text-3xl" />,
+    icon: <SiTypescript className="text-blue-500 text-xl" />,
   },
-  { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-3xl" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-3xl" /> },
-  { name: "MySQL", icon: <SiMysql className="text-blue-600 text-3xl" /> },
-  {
-    name: "Tableau",
-    icon: <SiTableau className="text-blue-600 text-3xl" />,
-  },
+  { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-xl" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-xl" /> },
+  { name: "MySQL", icon: <SiMysql className="text-blue-600 text-xl" /> },
+  { name: "Tableau", icon: <SiTableau className="text-blue-600 text-xl" /> },
   {
     name: "Google BigQuery",
-    icon: <SiGooglebigquery className="text-blue-500 text-3xl" />,
+    icon: <SiGooglebigquery className="text-blue-500 text-xl" />,
   },
+  { name: "New Tech", icon: <FaReact className="text-pink-500 text-xl" /> },
 ];
 
 const InfiniteScroll = () => {
   return (
-    <div className="bg-[var(--base-color)] p-4 rounded-xl shadow-md text-white max-w-[22rem] mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
-      <h2 className="text-lg font-semibold text-center mb-3 w-full">
+    <div className="bg-[var(--base-color)] p-4 rounded-xl shadow-md text-white max-w-6xl mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
+      <h2 className="text-lg font-semibold text-center mb-6 w-full">
         Tech Stacks That I Have Used
       </h2>
+
       <div className="relative w-full overflow-hidden flex flex-col items-center">
-        {[0, 1].map((row) => (
+        {[0, 1, 2].map((row) => (
           <motion.div
             key={row}
             className="flex space-x-4 mb-3"
             animate={{
-              x: row === 0 ? [0, -1000] : [0, 1000],
+              x: row === 0 ? [0, -1000] : row === 1 ? [0, 1000] : [0, -1000],
             }}
             transition={{
               ease: "linear",
               repeat: Infinity,
               duration: 60,
             }}
-            style={{ display: "flex", flexWrap: "nowrap" }}
+            style={{
+              display: "flex",
+              flexWrap: "nowrap",
+              willChange: "transform",
+            }}
           >
-            {Array(100)
-              .fill([...techStacks])
-              .flat()
-              .map((tech, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center min-w-[80px]"
-                >
-                  {tech.icon}
-                  <span className="text-xs mt-1">{tech.name}</span>
-                </div>
-              ))}
+            {/* Limiting the number of items rendered per row */}
+            {techStacks.map((tech, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center space-x-1 rounded-full px-4 py-2 border-2 border-gray-400 transition-all hover:border-white"
+                style={{
+                  display: "inline-flex",
+                  whiteSpace: "nowrap", // Ensures text doesn't wrap
+                  minWidth: "auto", // Let the width adjust automatically
+                }}
+              >
+                <div className="text-3xl">{tech.icon}</div>
+                <span className="text-xs">{tech.name}</span>
+              </div>
+            ))}
           </motion.div>
         ))}
       </div>
