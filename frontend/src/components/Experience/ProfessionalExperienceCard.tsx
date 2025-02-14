@@ -35,6 +35,7 @@ const ProfessionalExperienceCard = () => {
       description: [
         "• Created automated financial reporting for the company's 6 branches using Macro VBA in Excel, resulting in a 90% increase in work efficiency",
         "• Developed a frontend e-commerce website for Depo79 using React Framework, enabling all sales to be conducted directly on the platform.",
+        "• Performed data preprocessing on a product sales list of 3,709 items using Python, cleaning the data by removing duplicates, handling missing values, and transforming it into the appropriate format, resulting in structured, consistent data ready for e-commerce website use.",
       ],
     },
     {

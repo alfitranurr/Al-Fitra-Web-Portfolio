@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RiAlertLine } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 
 const AlertInitially: React.FC = () => {
   const [showAlert, setShowAlert] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowAlert(false);
+    }, 10000); // Hide the alert after 10 seconds
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleCloseAlert = () => {
     console.log("Alert closed by user");
