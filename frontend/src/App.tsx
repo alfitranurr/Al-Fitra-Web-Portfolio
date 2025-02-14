@@ -1,6 +1,6 @@
 // src/App.tsx
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./main/navbar";
 import Footer from "./main/footer";
@@ -28,15 +28,6 @@ import LicenseCertification from "./components/Certificate/License&Certification
 import CommitteeOrganization from "./components/Certificate/Committee&Organization/committee&organization";
 
 const App: React.FC = () => {
-  const [showAlert, setShowAlert] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowAlert(false);
-    }, 10000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
@@ -53,7 +44,7 @@ const App: React.FC = () => {
         {/* ROUTES FOR THE MAIN CONTENT */}
         <div className="flex-grow relative">
           {/* SHOW THE ALERT INITIALLY */}
-          {showAlert && <AlertInitially />}
+          <AlertInitially />
           <Routes>
             {/* MAIN PAGE */}
             <Route path="/" element={<Home />} />

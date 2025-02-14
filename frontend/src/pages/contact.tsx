@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="flex justify-center mt-4 px-4 pt-[60px]">
       <div
-        className="max-w-6xl w-full p-4 bg-white/20 backdrop-blur-md backdrop-blur-none md:backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center mx-auto"
+        className="max-w-6xl w-full p-4 bg-white/20 backdrop-blur-md md:backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center mx-auto"
         style={{ backgroundColor: "var(--base-color)" }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-6 w-full">
