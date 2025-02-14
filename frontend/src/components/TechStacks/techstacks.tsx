@@ -47,9 +47,11 @@ const techStacks = [
   { name: "New Tech", icon: <FaReact className="text-pink-500 text-xl" /> },
 ];
 
+const techStacksInfinite = [...Array(15)].flatMap(() => techStacks);
+
 const InfiniteScroll = () => {
   return (
-    <div className="bg-[var(--base-color)] p-4 rounded-xl shadow-md text-white max-w-6xl mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
+    <div className="bg-[var(--base-color)] w-full p-4 rounded-xl shadow-md text-white max-w-6xl mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
       <h2 className="text-lg font-semibold text-center mb-6 w-full">
         Tech Stacks That I Have Used
       </h2>
@@ -60,7 +62,7 @@ const InfiniteScroll = () => {
             key={row}
             className="flex space-x-4 mb-3"
             animate={{
-              x: row === 0 ? [0, -1000] : row === 1 ? [0, 1000] : [0, -1000],
+              x: row === 0 ? [0, -1000] : row === 1 ? [0, 2000] : [0, -1500],
             }}
             transition={{
               ease: "linear",
@@ -74,14 +76,14 @@ const InfiniteScroll = () => {
             }}
           >
             {/* Limiting the number of items rendered per row */}
-            {techStacks.map((tech, index) => (
+            {techStacksInfinite.map((tech, index) => (
               <div
                 key={index}
                 className="flex items-center justify-center space-x-1 rounded-full px-4 py-2 border-2 border-gray-400 transition-all hover:border-white"
                 style={{
                   display: "inline-flex",
-                  whiteSpace: "nowrap", // Ensures text doesn't wrap
-                  minWidth: "auto", // Let the width adjust automatically
+                  whiteSpace: "nowrap",
+                  minWidth: "auto",
                 }}
               >
                 <div className="text-3xl">{tech.icon}</div>
