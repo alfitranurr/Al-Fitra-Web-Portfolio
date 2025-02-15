@@ -47,7 +47,7 @@ const techStacks = [
   { name: "New Tech", icon: <FaReact className="text-pink-500 text-xl" /> },
 ];
 
-const techStacksInfinite = [...Array(15)].flatMap(() => techStacks);
+const techStacksInfinite = [...Array(5)].flatMap(() => techStacks);
 
 const InfiniteScroll = () => {
   return (
@@ -79,7 +79,7 @@ const InfiniteScroll = () => {
             {techStacksInfinite.map((tech, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center space-x-1 rounded-full px-4 py-2 border-2 border-gray-400 transition-all hover:border-white"
+                className="flex items-center justify-center space-x-1 rounded-full px-4 py-2 border-2 border-gray-500 transition-all hover:border-white"
                 style={{
                   display: "inline-flex",
                   whiteSpace: "nowrap",
