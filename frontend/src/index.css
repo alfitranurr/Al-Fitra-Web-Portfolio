@@ -27,3 +27,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0; /* Start with the alert transparent */
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1; /* End with the alert fully visible */
+  }
+}

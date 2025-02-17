@@ -24,7 +24,12 @@ const AlertInitially: React.FC = () => {
       className="fixed inset-0 flex items-center justify-center z-50"
       style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
     >
-      <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg max-w-xs sm:max-w-md text-center relative">
+      <div
+        className="bg-white p-4 sm:p-6 rounded-xl shadow-lg max-w-xs sm:max-w-md text-center relative transform transition-all duration-500 ease-out"
+        style={{
+          animation: "slideInFromTop 0.8s ease-out", // Slightly adjusted duration for smoother effect
+        }}
+      >
         {/* Close Button */}
         <button
           onClick={handleCloseAlert}
