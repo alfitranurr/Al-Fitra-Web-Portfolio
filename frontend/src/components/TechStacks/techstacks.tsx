@@ -47,7 +47,7 @@ const techStacks = [
   { name: "New Tech", icon: <FaReact className="text-pink-500 text-xl" /> },
 ];
 
-const techStacksInfinite = [...Array(5)].flatMap(() => techStacks);
+const techStacksInfinite = [...Array(4)].flatMap(() => techStacks);
 
 const InfiniteScroll = () => {
   return (

@@ -60,7 +60,7 @@ const PoliceLine: React.FC<PoliceLineProps> = ({ items, isLoaded }) => {
           }}
         >
           {/* Duplicated items using array for continuous scroll */}
-          {Array.from({ length: 30 }).map((_, index) => (
+          {Array.from({ length: 15 }).map((_, index) => (
             <span
               key={index}
               className="flex items-center text-xs sm:text-sm md:text-sm whitespace-nowrap"
